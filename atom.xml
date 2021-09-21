@@ -3,9 +3,21 @@
     <id>http://example.com</id>
     <title>夜殿下的博客</title>
     <link href="http://example.com" />
-    <updated>2021-09-20T15:03:02.000Z</updated>
+    <updated>2021-09-21T16:57:53.000Z</updated>
+    <category term="中秋快乐" />
     <category term="个人经验" />
     <category term="个人感慨" />
+    <entry>
+        <id>http://example.com/2021/09/22/%E5%9C%A8%E5%86%9C%E5%A4%A7%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%AD%E7%A7%8B%E8%8A%82/</id>
+        <title>在农大的第一个中秋节</title>
+        <link rel="alternate" href="http://example.com/2021/09/22/%E5%9C%A8%E5%86%9C%E5%A4%A7%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%AD%E7%A7%8B%E8%8A%82/"/>
+        <content type="html">&lt;p&gt;感觉是个手黑的一天，中午恰饭博饼，安慰奖。晚上竞选，第一次倒一 (*꒦ິ⌓꒦ີ)&lt;/p&gt;
+&lt;p&gt;不过大学还是有好多机会的，不急这一次，不是还有学生部门竞选嘛，嘿嘿。&lt;/p&gt;
+&lt;p&gt;PS. 在网安真的好幸福，学姐送的小礼物超贴心，突然就幸福了✧*。٩(ˊωˋ*)و✧*。（学姐字也很好看哦～）&lt;/p&gt;
+</content>
+        <category term="中秋快乐" />
+        <updated>2021-09-21T16:57:53.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2021/09/20/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8D%A2%E4%B8%BB%E9%A2%98%E5%92%8C%E5%8F%91%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9C%8B%E6%B3%95/</id>
         <title>关于自己第一次换主题和发博客的一些看法</title>
