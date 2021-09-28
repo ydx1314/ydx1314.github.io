@@ -5,31 +5,20 @@
         <link>http://example.com</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Thu, 23 Sep 2021 19:19:26 +0800</pubDate>
-        <lastBuildDate>Thu, 23 Sep 2021 19:19:26 +0800</lastBuildDate>
-        <category>中秋快乐</category>
+        <pubDate>Wed, 22 Sep 2021 00:57:53 +0800</pubDate>
+        <lastBuildDate>Wed, 22 Sep 2021 00:57:53 +0800</lastBuildDate>
         <category>个人经验</category>
+        <category>中秋快乐</category>
         <category>个人感慨</category>
-        <category>女神</category>
-        <item>
-            <guid isPermalink="true">http://example.com/2021/09/23/%E3%80%82%E3%80%82%E3%80%82/</guid>
-            <title>。。。</title>
-            <link>http://example.com/2021/09/23/%E3%80%82%E3%80%82%E3%80%82/</link>
-            <category>女神</category>
-            <pubDate>Thu, 23 Sep 2021 19:19:26 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/09/23/YaJuzcPFmRq5VOg.jpg&#34; alt=&#34;女神.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;。。。。。&lt;/p&gt;
- ]]></description>
-        </item>
         <item>
             <guid isPermalink="true">http://example.com/2021/09/22/%E5%9C%A8%E5%86%9C%E5%A4%A7%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%AD%E7%A7%8B%E8%8A%82/</guid>
             <title>在农大的第一个中秋节</title>
             <link>http://example.com/2021/09/22/%E5%9C%A8%E5%86%9C%E5%A4%A7%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%AD%E7%A7%8B%E8%8A%82/</link>
             <category>中秋快乐</category>
             <pubDate>Wed, 22 Sep 2021 00:57:53 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;感觉是个手黑的一天，中午恰饭博饼，安慰奖。晚上竞选，第一次倒一 (*꒦ິ⌓꒦ີ)&lt;/p&gt;
-&lt;p&gt;不过大学还是有好多机会的，不急这一次，不是还有学生部门竞选嘛，嘿嘿。&lt;/p&gt;
-&lt;p&gt;PS. 在网安真的好幸福，学姐送的小礼物超贴心，突然就幸福了✧*。٩(ˊωˋ*)و✧*。（学姐字也很好看哦～）&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;  感觉是个手黑的一天，中午恰饭博饼，安慰奖。晚上竞选，第一次倒一(*꒦ິ⌓꒦ີ)&lt;/p&gt;
+&lt;p&gt;  不过大学还是有好多机会的，不急这一次，不是还有学生部门竞选嘛，嘿嘿。&lt;/p&gt;
+&lt;p&gt;PS.在网安真的好幸福，学姐送的小礼物超贴心，突然就幸福了✧&lt;em&gt;。٩(ˊωˋ&lt;/em&gt;)و✧*。（学姐字也很好看哦~）&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -39,10 +28,10 @@
             <category>个人经验</category>
             <pubDate>Mon, 20 Sep 2021 23:03:02 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;No.1  小白刚开始换主题的时候，不要追求好看（因为好看的主题配置都不大容易）&lt;/p&gt;
-&lt;p&gt;No.2  分清下载 theme 文件目录根里的配置文件（_config.yml）和 blog 文件目录根里的配置文件的区别，theme 里的配置文件是弄到时候博客界面里的内容，blog 里的配置文件里是定位 theme 文件（配置文件的 theme: **, 需要改成你下载的主题名）和博客网站的一些东西。&lt;/p&gt;
-&lt;p&gt;No.3  博客网站里的东西都在后台的数据库，如果有什么想要换的文字或者图片，可以在 blog 文件里找到相应的进行替换（但是图片的名字和格式不能改，因为改了到时候配置信息也得跟着改，不然无法读取）。&lt;/p&gt;
-&lt;p&gt;No.4  想改 blog 文件的时候，可以复制 blog 在其他磁盘先进行测试，测试成功再替换原本的 blog 文件（防止到时候改错乱码，又要补救，改来改去）&lt;/p&gt;
-&lt;p&gt;No.5  发博客的时候，记得在 tags: *******(冒号要英文的冒号。不要忘了中间的空格，不然上传不了远台仓库)。&lt;/p&gt;
+&lt;p&gt;No.2  分清下载theme文件目录根里的配置文件（_config.yml）和blog文件目录根里的配置文件的区别，theme里的配置文件是弄到时候博客界面里的内容，blog里的配置文件里是定位theme文件（配置文件的theme: **,需要改成你下载的主题名）和博客网站的一些东西。&lt;/p&gt;
+&lt;p&gt;No.3  博客网站里的东西都在后台的数据库，如果有什么想要换的文字或者图片，可以在blog文件里找到相应的进行替换（但是图片的名字和格式不能改，因为改了到时候配置信息也得跟着改，不然无法读取）。&lt;/p&gt;
+&lt;p&gt;No.4  想改blog文件的时候，可以复制blog在其他磁盘先进行测试，测试成功再替换原本的blog文件（防止到时候改错乱码，又要补救，改来改去）&lt;/p&gt;
+&lt;p&gt;No.5  发博客的时候，记得在tags: *******(冒号要英文的冒号。不要忘了中间的空格，不然上传不了远台仓库)。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -51,7 +40,7 @@
             <link>http://example.com/2021/09/20/%E7%94%B5%E8%84%91%E5%B0%8F%E7%99%BD%E6%8B%A5%E6%9C%89%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/</link>
             <category>个人感慨</category>
             <pubDate>Mon, 20 Sep 2021 22:57:16 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;自此小白开始了在计算机界浪迹天涯的 “欢乐” 旅程。&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;自此小白开始了在计算机界浪迹天涯的“欢乐”旅程。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -60,21 +49,16 @@
             <link>http://example.com/2021/09/19/hello-world/</link>
             <pubDate>Sun, 19 Sep 2021 12:29:22 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
-&lt;pre class=&#34; language-language-bash&#34;&gt;&lt;code class=&#34;language-language-bash&#34;&gt;$ hexo new &#34;My New Post&#34;
+&lt;h2 id=&#34;Quick-Start&#34;&gt;&lt;a href=&#34;#Quick-Start&#34; class=&#34;headerlink&#34; title=&#34;Quick Start&#34;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&#34;Create-a-new-post&#34;&gt;&lt;a href=&#34;#Create-a-new-post&#34; class=&#34;headerlink&#34; title=&#34;Create a new post&#34;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;pre class=&#34; language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;$ hexo new &lt;span class=&#34;token string&#34;&gt;&#34;My New Post&#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/writing.html&#34;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
-&lt;pre class=&#34; language-language-bash&#34;&gt;&lt;code class=&#34;language-language-bash&#34;&gt;$ hexo server
+&lt;h3 id=&#34;Run-server&#34;&gt;&lt;a href=&#34;#Run-server&#34; class=&#34;headerlink&#34; title=&#34;Run server&#34;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;pre class=&#34; language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;$ hexo server
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/server.html&#34;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
-&lt;pre class=&#34; language-language-bash&#34;&gt;&lt;code class=&#34;language-language-bash&#34;&gt;$ hexo generate
+&lt;h3 id=&#34;Generate-static-files&#34;&gt;&lt;a href=&#34;#Generate-static-files&#34; class=&#34;headerlink&#34; title=&#34;Generate static files&#34;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;pre class=&#34; language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;$ hexo generate
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/generating.html&#34;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
-&lt;pre class=&#34; language-language-bash&#34;&gt;&lt;code class=&#34;language-language-bash&#34;&gt;$ hexo deploy
+&lt;h3 id=&#34;Deploy-to-remote-sites&#34;&gt;&lt;a href=&#34;#Deploy-to-remote-sites&#34; class=&#34;headerlink&#34; title=&#34;Deploy to remote sites&#34;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;pre class=&#34; language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;$ hexo deploy
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/one-command-deployment.html&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
  ]]></description>
