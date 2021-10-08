@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "夜殿下的博客 • All posts by \"less 1\" tag",
+    "description": "",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/",
+            "url": "http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/",
+            "title": "新手小白第一次打sqli-lab靶场（less1）的小总结",
+            "date_published": "2021-10-08T15:23:36.000Z",
+            "content_html": "<p>  <strong>首先总结一些，在学习less 1时的一些sql注入的语言</strong></p>\n<p>  注释符(即之后的语句不再执行）： –+、– （空格）【/**/可代替空格】、#</p>\n<p>  查库：select schema_name from information_schema.schemata</p>\n<p>  查表：select table_name from information_schema.tables where table_name=’security’</p>\n<p>  查列：select column_name from information_schema.columns where table_name=’users’</p>\n<p>  order by _(数字)</p>\n<p>  union select(联合查询)</p>\n<p>  <strong>一些用到的函数</strong></p>\n<p>  group concat（将所有数据连接做成一行进行显示）</p>\n<p>  concat_ws（并列指令）【我感觉是并列指令】</p>\n<p>  永恒为真：and 1=1</p>\n<p><a href=\"https://sm.ms/image/kVyK1A56GOfTRCv\" target=\"_blank\"><img src=\"https://i.loli.net/2021/10/08/kVyK1A56GOfTRCv.png\" style=\"zoom:50%;\"  ></a></p>\n<p>  永恒为假：and 1=2</p>\n<p><a href=\"https://sm.ms/image/jZ7aEmdAHCND36S\" target=\"_blank\"><img src=\"https://i.loli.net/2021/10/08/jZ7aEmdAHCND36S.png\" ></a></p>\n<p><strong>自己的一些做题过程</strong></p>\n<p>看到提示里的id字样，用到?(get)指令，得到一个id</p>\n<p><a href=\"https://sm.ms/image/uyGpZ1rg2hMCeXV\" target=\"_blank\"><img src=\"https://i.loli.net/2021/10/08/uyGpZ1rg2hMCeXV.png\" ></a></p>\n<p>之后加入’，会发现出现了SQL syntax的报错，则存在SQL漏洞</p>\n<p><a href=\"https://sm.ms/image/eQLPclu7mkpz4Ng\" target=\"_blank\"><img src=\"https://i.loli.net/2021/10/08/eQLPclu7mkpz4Ng.png\" ></a></p>\n<p>这时候用order by指令可以知道数据库共有三列</p>\n<p>并用查库指令知道数据库的资料</p>\n<p><a href=\"https://sm.ms/image/5fsKBE3dhAWnRzO\" target=\"_blank\"><img src=\"https://i.loli.net/2021/10/08/5fsKBE3dhAWnRzO.png\" ></a></p>\n<p>再分别用查表指令</p>\n<p><a href=\"https://sm.ms/image/COTStXn7dKyW5Qs\" target=\"_blank\"><img src=\"https://i.loli.net/2021/10/08/COTStXn7dKyW5Qs.png\" ></a></p>\n<p>这里涉及单引号问题（我现在也不清楚单引号问题是什么）可改16进制表示（0x……）</p>\n<p><a href=\"https://sm.ms/image/ZioVd7aKuhgTCEB\" target=\"_blank\"><img src=\"https://i.loli.net/2021/10/08/ZioVd7aKuhgTCEB.png\" ></a></p>\n<p>查列</p>\n<p><a href=\"https://sm.ms/image/FUKJVSbd4IzQ1PL\" target=\"_blank\"><img src=\"https://i.loli.net/2021/10/08/FUKJVSbd4IzQ1PL.png\" ></a></p>\n<p>改16进制</p>\n<p><a href=\"https://sm.ms/image/HV134FpxfEeAwrN\" target=\"_blank\"><img src=\"https://i.loli.net/2021/10/08/HV134FpxfEeAwrN.png\" ></a></p>\n<p>之后还有一个查字段的指令，需要用到concat_ws指令来爆数据库，目前还没学会相应指令，后期学会了，会进行更改！</p>\n<p>学习时参考了：<a href=\"https://www.bilibili.com/video/BV1e441127Rd?p=4\">https://www.bilibili.com/video/BV1e441127Rd?p=4</a></p>\n<p>​                           还有一些没记住地址的博客</p>\n<p>​                           还有炜刚学长的blog</p>\n",
+            "tags": [
+                "less 1"
+            ]
+        }
+    ]
+}

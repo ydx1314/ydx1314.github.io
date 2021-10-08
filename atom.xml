@@ -3,20 +3,51 @@
     <id>http://example.com</id>
     <title>夜殿下的博客</title>
     <link href="http://example.com" />
-    <updated>2021-09-21T16:57:53.000Z</updated>
+    <updated>2021-10-08T15:23:36.000Z</updated>
     <category term="个人经验" />
-    <category term="中秋快乐" />
+    <category term="less 1" />
     <category term="个人感慨" />
     <entry>
-        <id>http://example.com/2021/09/22/%E5%9C%A8%E5%86%9C%E5%A4%A7%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%AD%E7%A7%8B%E8%8A%82/</id>
-        <title>在农大的第一个中秋节</title>
-        <link rel="alternate" href="http://example.com/2021/09/22/%E5%9C%A8%E5%86%9C%E5%A4%A7%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%AD%E7%A7%8B%E8%8A%82/"/>
-        <content type="html">&lt;p&gt;  感觉是个手黑的一天，中午恰饭博饼，安慰奖。晚上竞选，第一次倒一(*꒦ິ⌓꒦ີ)&lt;/p&gt;
-&lt;p&gt;  不过大学还是有好多机会的，不急这一次，不是还有学生部门竞选嘛，嘿嘿。&lt;/p&gt;
-&lt;p&gt;PS.在网安真的好幸福，学姐送的小礼物超贴心，突然就幸福了✧&lt;em&gt;。٩(ˊωˋ&lt;/em&gt;)و✧*。（学姐字也很好看哦~）&lt;/p&gt;
+        <id>http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/</id>
+        <title>新手小白第一次打sqli-lab靶场（less1）的小总结</title>
+        <link rel="alternate" href="http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/"/>
+        <content type="html">&lt;p&gt;  &lt;strong&gt;首先总结一些，在学习less 1时的一些sql注入的语言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  注释符(即之后的语句不再执行）： –+、– （空格）【/**/可代替空格】、#&lt;/p&gt;
+&lt;p&gt;  查库：select schema_name from information_schema.schemata&lt;/p&gt;
+&lt;p&gt;  查表：select table_name from information_schema.tables where table_name=’security’&lt;/p&gt;
+&lt;p&gt;  查列：select column_name from information_schema.columns where table_name=’users’&lt;/p&gt;
+&lt;p&gt;  order by _(数字)&lt;/p&gt;
+&lt;p&gt;  union select(联合查询)&lt;/p&gt;
+&lt;p&gt;  &lt;strong&gt;一些用到的函数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  group concat（将所有数据连接做成一行进行显示）&lt;/p&gt;
+&lt;p&gt;  concat_ws（并列指令）【我感觉是并列指令】&lt;/p&gt;
+&lt;p&gt;  永恒为真：and 1=1&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/kVyK1A56GOfTRCv&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/kVyK1A56GOfTRCv.png&#34; style=&#34;zoom:50%;&#34;  &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;  永恒为假：and 1=2&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/jZ7aEmdAHCND36S&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/jZ7aEmdAHCND36S.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;自己的一些做题过程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;看到提示里的id字样，用到?(get)指令，得到一个id&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/uyGpZ1rg2hMCeXV&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/uyGpZ1rg2hMCeXV.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之后加入’，会发现出现了SQL syntax的报错，则存在SQL漏洞&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/eQLPclu7mkpz4Ng&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/eQLPclu7mkpz4Ng.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这时候用order by指令可以知道数据库共有三列&lt;/p&gt;
+&lt;p&gt;并用查库指令知道数据库的资料&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/5fsKBE3dhAWnRzO&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/5fsKBE3dhAWnRzO.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;再分别用查表指令&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/COTStXn7dKyW5Qs&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/COTStXn7dKyW5Qs.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里涉及单引号问题（我现在也不清楚单引号问题是什么）可改16进制表示（0x……）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/ZioVd7aKuhgTCEB&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/ZioVd7aKuhgTCEB.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;查列&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/FUKJVSbd4IzQ1PL&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/FUKJVSbd4IzQ1PL.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;改16进制&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/HV134FpxfEeAwrN&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/HV134FpxfEeAwrN.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之后还有一个查字段的指令，需要用到concat_ws指令来爆数据库，目前还没学会相应指令，后期学会了，会进行更改！&lt;/p&gt;
+&lt;p&gt;学习时参考了：&lt;a href=&#34;https://www.bilibili.com/video/BV1e441127Rd?p=4&#34;&gt;https://www.bilibili.com/video/BV1e441127Rd?p=4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​                           还有一些没记住地址的博客&lt;/p&gt;
+&lt;p&gt;​                           还有炜刚学长的blog&lt;/p&gt;
 </content>
-        <category term="中秋快乐" />
-        <updated>2021-09-21T16:57:53.000Z</updated>
+        <category term="less 1" />
+        <updated>2021-10-08T15:23:36.000Z</updated>
     </entry>
     <entry>
         <id>http://example.com/2021/09/20/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8D%A2%E4%B8%BB%E9%A2%98%E5%92%8C%E5%8F%91%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9C%8B%E6%B3%95/</id>

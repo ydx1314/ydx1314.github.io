@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>夜殿下的博客 • Posts by &#34;less 1&#34; tag</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 08 Oct 2021 23:23:36 +0800</pubDate>
+        <lastBuildDate>Fri, 08 Oct 2021 23:23:36 +0800</lastBuildDate>
+        <category>个人经验</category>
+        <category>less 1</category>
+        <category>个人感慨</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/</guid>
+            <title>新手小白第一次打sqli-lab靶场（less1）的小总结</title>
+            <link>http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/</link>
+            <category>less 1</category>
+            <pubDate>Fri, 08 Oct 2021 23:23:36 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;  &lt;strong&gt;首先总结一些，在学习less 1时的一些sql注入的语言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  注释符(即之后的语句不再执行）： –+、– （空格）【/**/可代替空格】、#&lt;/p&gt;
+&lt;p&gt;  查库：select schema_name from information_schema.schemata&lt;/p&gt;
+&lt;p&gt;  查表：select table_name from information_schema.tables where table_name=’security’&lt;/p&gt;
+&lt;p&gt;  查列：select column_name from information_schema.columns where table_name=’users’&lt;/p&gt;
+&lt;p&gt;  order by _(数字)&lt;/p&gt;
+&lt;p&gt;  union select(联合查询)&lt;/p&gt;
+&lt;p&gt;  &lt;strong&gt;一些用到的函数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  group concat（将所有数据连接做成一行进行显示）&lt;/p&gt;
+&lt;p&gt;  concat_ws（并列指令）【我感觉是并列指令】&lt;/p&gt;
+&lt;p&gt;  永恒为真：and 1=1&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/kVyK1A56GOfTRCv&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/kVyK1A56GOfTRCv.png&#34; style=&#34;zoom:50%;&#34;  &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;  永恒为假：and 1=2&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/jZ7aEmdAHCND36S&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/jZ7aEmdAHCND36S.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;自己的一些做题过程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;看到提示里的id字样，用到?(get)指令，得到一个id&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/uyGpZ1rg2hMCeXV&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/uyGpZ1rg2hMCeXV.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之后加入’，会发现出现了SQL syntax的报错，则存在SQL漏洞&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/eQLPclu7mkpz4Ng&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/eQLPclu7mkpz4Ng.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这时候用order by指令可以知道数据库共有三列&lt;/p&gt;
+&lt;p&gt;并用查库指令知道数据库的资料&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/5fsKBE3dhAWnRzO&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/5fsKBE3dhAWnRzO.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;再分别用查表指令&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/COTStXn7dKyW5Qs&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/COTStXn7dKyW5Qs.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里涉及单引号问题（我现在也不清楚单引号问题是什么）可改16进制表示（0x……）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/ZioVd7aKuhgTCEB&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/ZioVd7aKuhgTCEB.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;查列&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/FUKJVSbd4IzQ1PL&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/FUKJVSbd4IzQ1PL.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;改16进制&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/HV134FpxfEeAwrN&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/08/HV134FpxfEeAwrN.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之后还有一个查字段的指令，需要用到concat_ws指令来爆数据库，目前还没学会相应指令，后期学会了，会进行更改！&lt;/p&gt;
+&lt;p&gt;学习时参考了：&lt;a href=&#34;https://www.bilibili.com/video/BV1e441127Rd?p=4&#34;&gt;https://www.bilibili.com/video/BV1e441127Rd?p=4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​                           还有一些没记住地址的博客&lt;/p&gt;
+&lt;p&gt;​                           还有炜刚学长的blog&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
