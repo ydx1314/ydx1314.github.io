@@ -167,17 +167,17 @@
             <div class="typo" style="padding: 3rem;">
                 <p><a href="https://sm.ms/image/3FQCeWsd7aivnBI" target="_blank"><img src="https://i.loli.net/2021/10/21/3FQCeWsd7aivnBI.jpg" ></a></p>
 <p><a href="https://sm.ms/image/AWe683cGfxhyN9q" target="_blank"><img src="https://i.loli.net/2021/10/21/AWe683cGfxhyN9q.jpg" ></a></p>
-<p>通过对比 less 1 和 less 2，在输入？id=1’时报错信息的不同可以看出 less 1 是 near&quot;1&quot;, 而 less 2 是 near’’。因此在执行指令时，less 2 比 less 1 在 sql 语法报错上少了一个’。</p>
+<p>通过对比less 1和less 2，在输入?id=1’时报错信息的不同可以看出less 1是near”1”,而less 2是near’’。因此在执行指令时，less 2比less 1在sql语法报错上少了一个’。</p>
 <p>以查列指令为例：</p>
 <p><a href="https://sm.ms/image/eJpKRTFruAvjG9t" target="_blank"><img src="https://i.loli.net/2021/10/21/eJpKRTFruAvjG9t.png" ></a></p>
-<p>同理，在 less 3 的时候报错信息为</p>
+<p>同理，在less 3的时候报错信息为</p>
 <p><a href="https://sm.ms/image/AXgrWo24IseNyqU" target="_blank"><img src="https://i.loli.net/2021/10/21/AXgrWo24IseNyqU.png" ></a></p>
-<p>即需要我们输入？id=1’) 才可成功执行之后的 sql 注入指令<a href="https://sm.ms/image/1pHMoOJKui3cNmE" target="_blank"><img src="https://i.loli.net/2021/10/21/1pHMoOJKui3cNmE.png" ></a></p>
+<p>即需要我们输入?id=1’)才可成功执行之后的sql注入指令<a href="https://sm.ms/image/1pHMoOJKui3cNmE" target="_blank"><img src="https://i.loli.net/2021/10/21/1pHMoOJKui3cNmE.png" ></a></p>
 <p>less 4</p>
 <p><a href="https://sm.ms/image/are9OcdXmiDqTFs" target="_blank"><img src="https://i.loli.net/2021/10/21/are9OcdXmiDqTFs.png" ></a></p>
-<p>显示需输入？id=1&quot; 才可执行后续命令，且需使前面的内容报错，才可执行（有点不理解，因为有时候没报错也可以执行）<a href="https://sm.ms/image/7HAad3kZfTLYtqM" target="_blank"><img src="https://i.loli.net/2021/10/21/7HAad3kZfTLYtqM.png" ></a></p>
-<p>后续的操作均与 less 1 一样。</p>
-<p>总结：当发现 SQL 语法错误漏洞时，得弄清是什么样的错误漏洞，并根据实际情况进行调整。</p>
+<p>显示需输入?id=1”才可执行后续命令，且需使前面的内容报错，才可执行（有点不理解，因为有时候没报错也可以执行）<a href="https://sm.ms/image/7HAad3kZfTLYtqM" target="_blank"><img src="https://i.loli.net/2021/10/21/7HAad3kZfTLYtqM.png" ></a></p>
+<p>后续的操作均与less 1一样。</p>
+<p>总结：当发现SQL语法错误漏洞时，得弄清是什么样的错误漏洞，并根据实际情况进行调整。</p>
 
             </div>
 
