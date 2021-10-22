@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>夜殿下的博客 • Posts by &#34;乱七八糟&#34; tag</title>
+    <link href="http://example.com" />
+    <updated>2021-10-22T12:30:26.000Z</updated>
+    <category term="个人经验" />
+    <category term="乱七八糟" />
+    <category term="less 1" />
+    <category term="个人感慨" />
+    <entry>
+        <id>http://example.com/2021/10/22/%E5%85%B3%E4%BA%8Ephpstudy2018%E7%9A%84Apache%E7%9A%84%E8%A1%80%E6%B3%AA%E6%95%99%E8%AE%AD/</id>
+        <title>关于phpstudy2018的Apache的血泪教训</title>
+        <link rel="alternate" href="http://example.com/2021/10/22/%E5%85%B3%E4%BA%8Ephpstudy2018%E7%9A%84Apache%E7%9A%84%E8%A1%80%E6%B3%AA%E6%95%99%E8%AE%AD/"/>
+        <content type="html">&lt;p&gt;问题来的就挺突然的，在一次启动 phpstudy 准备刷靶场的时候，发现 phpstudy 的 Apache 又红了。但是和往常不同，这次即便我卸载重装，依旧还是没用。在一顿搜索操作后，排除了防火墙问题和窗口占用问题，将苗头锁向 phpstudy 的配置文件问题上。&lt;/p&gt;
+&lt;p&gt;挺玄学的说实话，啥都没弄，它自己坏，和玩似的……&lt;/p&gt;
+&lt;p&gt;打开 D:\phpStudy\PHPTutorial\Apache\bin，并开启该文件夹的运行指令窗口，输入 httpd.exe&lt;/p&gt;
+&lt;p&gt;不输不知道，一输吓一跳 /(ㄒ o ㄒ)/&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/xYQHy5aMR2ZXnz8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/22/xYQHy5aMR2ZXnz8.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/17gtrWmEbNMz4Al&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/22/17gtrWmEbNMz4Al.png&#34; &gt;&lt;/a&gt;&lt;a href=&#34;https://sm.ms/image/EduUAQ9mpbThRfG&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/22/EduUAQ9mpbThRfG.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;前前后后共出现了八种错误……………………&lt;/p&gt;
+&lt;p&gt;在解决以下错误时&lt;a href=&#34;https://sm.ms/image/17gtrWmEbNMz4Al&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/22/17gtrWmEbNMz4Al.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;先去到 D:\phpStudy\PHPTutorial\Apache\conf，打开 httpd.conf，用快捷方式，锁定到端口栏，并修改端口&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/78QSVusxbrnCl6k&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/22/78QSVusxbrnCl6k.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;遇到以下配置文件语法问题时&lt;a href=&#34;https://sm.ms/image/xYQHy5aMR2ZXnz8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/22/xYQHy5aMR2ZXnz8.png&#34; &gt;&lt;/a&gt;&lt;a href=&#34;https://sm.ms/image/EduUAQ9mpbThRfG&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/22/EduUAQ9mpbThRfG.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;根据错误位置，进入相应的文件，到对应函数，当报错信息只写明报错位置时，我采取的方法是用 #放在句前，将错误语句注释&lt;a href=&#34;https://sm.ms/image/RJ4kozgF9pxwXT2&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/22/RJ4kozgF9pxwXT2.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​    而以下有说明的错误类型，则是依靠万能的百度，按照教程，进行修改。&lt;/p&gt;
+&lt;p&gt;之后，就，就会得到一个绿色的 Apache！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/aUpJOxK8Y2jCeHT&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/22/aUpJOxK8Y2jCeHT.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PS. 之后遇到什么奇奇怪怪的问题，还会陆续跟进！&lt;/p&gt;
+</content>
+        <category term="乱七八糟" />
+        <updated>2021-10-22T12:30:26.000Z</updated>
+    </entry>
+</feed>
