@@ -4,11 +4,12 @@
     <title>夜殿下的博客 • Posts by &#34;个人经验&#34; tag</title>
     <link href="http://example.com" />
     <updated>2021-10-21T08:18:43.000Z</updated>
+    <category term="个人经验" />
     <category term="乱七八糟" />
     <category term="学习小结" />
-    <category term="个人经验" />
     <category term="less 1" />
     <category term="个人感慨" />
+    <category term="知识小结" />
     <entry>
         <id>http://example.com/2021/10/21/%E5%85%B3%E4%BA%8Eless%202%E5%88%B0less%204%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/</id>
         <title>关于less 2到lees 4的小总结</title>
