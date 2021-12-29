@@ -7,9 +7,9 @@
         <language>zh-CN</language>
         <pubDate>Sun, 19 Dec 2021 13:25:49 +0800</pubDate>
         <lastBuildDate>Sun, 19 Dec 2021 13:25:49 +0800</lastBuildDate>
+        <category>个人经验</category>
         <category>学习小结</category>
         <category>乱七八糟</category>
-        <category>个人经验</category>
         <category>less 1</category>
         <category>个人感慨</category>
         <category>知识小结</category>
@@ -19,11 +19,19 @@
             <link>http://example.com/2021/12/19/%E7%9B%B2%E6%B3%A8%E8%84%9A%E6%9C%AC%E7%9A%84%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/</link>
             <category>知识小结</category>
             <pubDate>Sun, 19 Dec 2021 13:25:49 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt; import requests   //引用的数据库名称&lt;br&gt;import time&lt;/p&gt;
-&lt;p&gt;url:”网址”&lt;/p&gt;
-&lt;p&gt;dict=””          //字典内容，自己编写&lt;/p&gt;
-&lt;p&gt;flag=””        //输出的flag？&lt;/p&gt;
-&lt;p&gt;for i in range(0,11):&lt;br&gt;for char in dict:                                          //输出字典内容&lt;br&gt;   payload=”and substr  …………”             //输入对应查询函数&lt;br&gt;   url=url+payload&lt;br&gt;   print(url)&lt;br&gt;   r=requests.get(url)&lt;br&gt;   if “are” in r.text:                     // 判断are是否在r.text文件内&lt;br&gt;     flag+=char&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;import requests   // 引用的数据库名称&lt;br&gt;
+ import time&lt;/p&gt;
+&lt;p&gt;url:“网址”&lt;/p&gt;
+&lt;p&gt;dict=&amp;quot;&amp;quot;          // 字典内容，自己编写&lt;/p&gt;
+&lt;p&gt;flag=&amp;quot;&amp;quot;        // 输出的 flag？&lt;/p&gt;
+&lt;p&gt;for i in range(0,11):&lt;br&gt;
+for char in dict:                                          // 输出字典内容&lt;br&gt;
+ payload=“and substr  …………”             // 输入对应查询函数&lt;br&gt;
+ url=url+payload&lt;br&gt;
+print(url)&lt;br&gt;
+r=requests.get(url)&lt;br&gt;
+ if “are” in r.text:                     // 判断 are 是否在 r.text 文件内&lt;br&gt;
+ flag+=char&lt;/p&gt;
 &lt;p&gt;print(flag)&lt;/p&gt;
  ]]></description>
         </item>

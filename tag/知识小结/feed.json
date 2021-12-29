@@ -9,7 +9,7 @@
             "url": "http://example.com/2021/12/19/%E7%9B%B2%E6%B3%A8%E8%84%9A%E6%9C%AC%E7%9A%84%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/",
             "title": "盲注脚本的简要总结",
             "date_published": "2021-12-19T05:25:49.000Z",
-            "content_html": "<p> import requests   //引用的数据库名称<br>import time</p>\n<p>url:”网址”</p>\n<p>dict=””          //字典内容，自己编写</p>\n<p>flag=””        //输出的flag？</p>\n<p>for i in range(0,11):<br>for char in dict:                                          //输出字典内容<br>   payload=”and substr  …………”             //输入对应查询函数<br>   url=url+payload<br>   print(url)<br>   r=requests.get(url)<br>   if “are” in r.text:                     // 判断are是否在r.text文件内<br>     flag+=char</p>\n<p>print(flag)</p>\n",
+            "content_html": "<p>import requests   // 引用的数据库名称<br>\n import time</p>\n<p>url:“网址”</p>\n<p>dict=&quot;&quot;          // 字典内容，自己编写</p>\n<p>flag=&quot;&quot;        // 输出的 flag？</p>\n<p>for i in range(0,11):<br>\nfor char in dict:                                          // 输出字典内容<br>\n payload=“and substr  …………”             // 输入对应查询函数<br>\n url=url+payload<br>\nprint(url)<br>\nr=requests.get(url)<br>\n if “are” in r.text:                     // 判断 are 是否在 r.text 文件内<br>\n flag+=char</p>\n<p>print(flag)</p>\n",
             "tags": [
                 "知识小结"
             ]
