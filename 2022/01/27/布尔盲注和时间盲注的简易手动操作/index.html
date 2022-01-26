@@ -161,47 +161,27 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >新手小白第一次打sqli-lab靶场（less1）的小总结</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >布尔盲注和时间盲注的简易手动操作</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>  <strong>首先总结一些，在学习less 1时的一些sql注入的语言</strong></p>
-<p>  注释符(即之后的语句不再执行）： –+、– （空格）【/**/可代替空格】、#</p>
-<p>  查库：select schema_name from information_schema.schemata</p>
-<p>  查表：select table_name from information_schema.tables where table_name=’security’</p>
-<p>  查列：select column_name from information_schema.columns where table_name=’users’</p>
-<p>  order by _(数字)</p>
-<p>  union select(联合查询)</p>
-<p>  <strong>一些用到的函数</strong></p>
-<p>  group concat（将所有数据连接做成一行进行显示）</p>
-<p>  concat_ws（并列指令）【我感觉是并列指令】</p>
-<p>  永恒为真：and 1=1</p>
-<p><a href="https://sm.ms/image/kVyK1A56GOfTRCv" target="_blank"><img src="https://i.loli.net/2021/10/08/kVyK1A56GOfTRCv.png" style="zoom:50%;"  ></a></p>
-<p>  永恒为假：and 1=2</p>
-<p><a href="https://sm.ms/image/jZ7aEmdAHCND36S" target="_blank"><img src="https://i.loli.net/2021/10/08/jZ7aEmdAHCND36S.png" ></a></p>
-<p><strong>自己的一些做题过程</strong></p>
-<p>看到提示里的id字样，用到?(get)指令，得到一个id</p>
-<p><a href="https://sm.ms/image/uyGpZ1rg2hMCeXV" target="_blank"><img src="https://i.loli.net/2021/10/08/uyGpZ1rg2hMCeXV.png" ></a></p>
-<p>之后加入’，会发现出现了SQL syntax的报错，则存在SQL漏洞</p>
-<p><a href="https://sm.ms/image/eQLPclu7mkpz4Ng" target="_blank"><img src="https://i.loli.net/2021/10/08/eQLPclu7mkpz4Ng.png" ></a></p>
-<p>这时候用order by指令可以知道数据库共有三列</p>
-<p>并用查库指令知道数据库的资料</p>
-<p><a href="https://sm.ms/image/5fsKBE3dhAWnRzO" target="_blank"><img src="https://i.loli.net/2021/10/08/5fsKBE3dhAWnRzO.png" ></a></p>
-<p>再分别用查表指令</p>
-<p><a href="https://sm.ms/image/COTStXn7dKyW5Qs" target="_blank"><img src="https://i.loli.net/2021/10/08/COTStXn7dKyW5Qs.png" ></a></p>
-<p>这里涉及单引号问题（我现在也不清楚单引号问题是什么）可改16进制表示（0x……）</p>
-<p><a href="https://sm.ms/image/ZioVd7aKuhgTCEB" target="_blank"><img src="https://i.loli.net/2021/10/08/ZioVd7aKuhgTCEB.png" ></a></p>
-<p>查列</p>
-<p><a href="https://sm.ms/image/FUKJVSbd4IzQ1PL" target="_blank"><img src="https://i.loli.net/2021/10/08/FUKJVSbd4IzQ1PL.png" ></a></p>
-<p>改16进制</p>
-<p><a href="https://sm.ms/image/HV134FpxfEeAwrN" target="_blank"><img src="https://i.loli.net/2021/10/08/HV134FpxfEeAwrN.png" ></a></p>
-<p>查字段</p>
-<p><a href="https://sm.ms/image/ZxJq4zo1r6yHF79" target="_blank"><img src="https://i.loli.net/2021/10/09/ZxJq4zo1r6yHF79.png" ></a></p>
-<p>用concat_ws函数联合group_concat函数爆数据库</p>
-<p><a href="https://sm.ms/image/9IwizF48hADQMqL" target="_blank"><img src="https://i.loli.net/2021/10/09/9IwizF48hADQMqL.png" ></a></p>
-<p>学习时参考了：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1e441127Rd?p=4">https://www.bilibili.com/video/BV1e441127Rd?p=4</a></p>
-<p>​                           还有一些没记住地址的博客</p>
-<p>​                           还有炜刚学长的blog</p>
+                <p> 在less 5这关时，会发现按照之前的方法输入?id=1’–+，他并不会给你想要的信息，而是会回显you are in</p>
+<p><a href="https://sm.ms/image/fBMIk3NUyjdrwtF" target="_blank"><img src="https://s2.loli.net/2022/01/21/fBMIk3NUyjdrwtF.png" ></a></p>
+<p> 可以判断，该处注入方式为布尔盲注（即只有正确了只回显you are in）</p>
+<p> 此处可以用length(database())=?来推出database数据库的库名有几个字符长度</p>
+<p><a href="https://sm.ms/image/nQZ5XT8pDf1bA34" target="_blank"><img src="https://s2.loli.net/2022/01/21/nQZ5XT8pDf1bA34.png" ></a></p>
+<p> 而后可根据二分法ascii(substr(database()))=?（&gt;? 或 &lt;?）来推断库名</p>
+<p> <em>PS.其中substr括号内是数据库查找方式，也可以是查表查列查字段，详见less1</em></p>
+<p> <a href="https://sm.ms/image/VTzI9HZwkAKmhC8" target="_blank"><img src="https://s2.loli.net/2022/01/21/VTzI9HZwkAKmhC8.png" ></a></p>
+<p> less 6是基于less 5的基础上，由单引号闭合改为了双引号闭合</p>
+<p> <a href="https://sm.ms/image/HDB7CnPb3hZXp8V" target="_blank"><img src="https://s2.loli.net/2022/01/21/HDB7CnPb3hZXp8V.png" ></a></p>
+<p> <strong>if函数使用</strong></p>
+<p> if(条件,正确回显,错误回显)</p>
+<p> <a href="https://sm.ms/image/5v2WN1z6pKdkfbX" target="_blank"><img src="https://s2.loli.net/2022/01/27/5v2WN1z6pKdkfbX.png" ></a></p>
+<p> <strong>sleep睡眠使用</strong></p>
+<p> <a href="https://sm.ms/image/vPkOWYBQ35XRnAw" target="_blank"><img src="https://s2.loli.net/2022/01/27/vPkOWYBQ35XRnAw.png" ></a></p>
+<p> 如图可知，程序运行（睡眠）了5s。</p>
+<p> 之后的第八关和第九关、第十关，均可用if和sleep来手动操作（区别就是id=1后的闭合符合不同，详见第less 1~4。</p>
 
             </div>
 
@@ -264,8 +244,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://example.com/2022/01/27/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E5%92%8C%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8%E7%9A%84%E7%AE%80%E6%98%93%E6%89%8B%E5%8A%A8%E6%93%8D%E4%BD%9C/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2022/01/27/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E5%92%8C%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8%E7%9A%84%E7%AE%80%E6%98%93%E6%89%8B%E5%8A%A8%E6%93%8D%E4%BD%9C/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

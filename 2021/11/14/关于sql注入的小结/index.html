@@ -165,22 +165,22 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>打开 NSS easy sql，发现题目提示 “输入点什么”。且标题提示 wllm，不妨假设，sql 注入点的名字就是 wllm。</p>
-<p>使用 order by 函数，可查得，数据库的表共有三列。</p>
+                <p>  打开NSS easy sql，发现题目提示“输入点什么”。且标题提示wllm，不妨假设，sql注入点的名字就是wllm。</p>
+<p>  使用order by函数，可查得，数据库的表共有三列。</p>
 <p><a href="https://sm.ms/image/p6UmunyJahMvtcX" target="_blank"><img src="https://i.loli.net/2021/11/14/p6UmunyJahMvtcX.png" ></a></p>
 <p><a href="https://sm.ms/image/tOisek7pPMl8znb" target="_blank"><img src="https://i.loli.net/2021/11/14/tOisek7pPMl8znb.png" ></a></p>
-<p>之后再用联合查询语句 union select 1,2,database ()–+，可查出数据库名为 test_db（注意：如果回显没有东西，就把前面的 1 改为 - 1 或者一个不可读的数）</p>
+<p>  之后再用联合查询语句union select 1,2,database()–+，可查出数据库名为test_db（注意：如果回显没有东西，就把前面的1改为-1或者一个不可读的数）</p>
 <p><a href="https://sm.ms/image/4yZtH6rlDLeKV9A" target="_blank"><img src="https://i.loli.net/2021/11/14/4yZtH6rlDLeKV9A.png" ></a></p>
-<p>查得数据库名后，再使用查表指令</p>
+<p>  查得数据库名后，再使用查表指令</p>
 <p><a href="https://sm.ms/image/1cFYt8eVxWPyvuw" target="_blank"><img src="https://i.loli.net/2021/11/14/1cFYt8eVxWPyvuw.png" ></a></p>
-<p>再从表中找到对应列</p>
+<p>  再从表中找到对应列</p>
 <p><a href="https://sm.ms/image/cEzegt2mYNjW18a" target="_blank"><img src="https://i.loli.net/2021/11/14/cEzegt2mYNjW18a.png" ></a></p>
-<p>最后查字段爆出 flag<a href="https://sm.ms/image/rP5Ghv8HXOxMkbD" target="_blank"><img src="https://i.loli.net/2021/11/14/rP5Ghv8HXOxMkbD.png" ></a></p>
-<p>小收获：group_concat 函数的应用，输入对应的库，表，列，会将对应的信息，排成一列，回显出来。</p>
-<p>极客大挑战的 love sql 与 NSS 的 easy sql 类似。多了一个万能钥匙的使用和 #转 url 编码的转换（题目中 #和–+ 等注释符可能被删除。</p>
-<p>此时认清楚，%23 是 #的 url 编码显得极其重要。</p>
+<p>  最后查字段爆出flag<a href="https://sm.ms/image/rP5Ghv8HXOxMkbD" target="_blank"><img src="https://i.loli.net/2021/11/14/rP5Ghv8HXOxMkbD.png" ></a></p>
+<p>  小收获：group_concat函数的应用，输入对应的库，表，列，会将对应的信息，排成一列，回显出来。</p>
+<p>  极客大挑战的love sql与NSS的easy sql类似。多了一个万能钥匙的使用和#转url编码的转换（题目中#和–+等注释符可能被删除。</p>
+<p>  此时认清楚，%23是#的url编码显得极其重要。</p>
 <p><a href="https://sm.ms/image/ZG3zuiaXdUNWvsK" target="_blank"><img src="https://i.loli.net/2021/11/14/ZG3zuiaXdUNWvsK.jpg" ></a></p>
-<p>username=1 后即为可操作的位置。</p>
+<p>  username=1后即为可操作的位置。</p>
 <p>万能钥匙<a href="https://sm.ms/image/JTSpFAd584gteOh" target="_blank"><img src="https://i.loli.net/2021/11/14/JTSpFAd584gteOh.png" ></a></p>
 
             </div>

