@@ -161,47 +161,42 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >新手小白第一次打sqli-lab靶场（less1）的小总结</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >基于POST类型的sql注入</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p><strong>首先总结一些，在学习 less 1 时的一些 sql 注入的语言</strong></p>
-<p>注释符 (即之后的语句不再执行）： --+、-- （空格）【/**/ 可代替空格】、#</p>
-<p>查库：select schema_name from information_schema.schemata</p>
-<p>查表：select table_name from information_schema.tables where table_schema=‘security’</p>
-<p>查列：select column_name from information_schema.columns where table_name=‘users’</p>
-<p>order by _(数字)</p>
-<p>union select (联合查询)</p>
-<p><strong>一些用到的函数</strong></p>
-<p>group concat（将所有数据连接做成一行进行显示）</p>
-<p>concat_ws（并列指令）【我感觉是并列指令】</p>
-<p>永恒为真：and 1=1</p>
-<p><a href="https://sm.ms/image/kVyK1A56GOfTRCv" target="_blank"><img src="https://i.loli.net/2021/10/08/kVyK1A56GOfTRCv.png" style="zoom:50%;"  ></a></p>
-<p>永恒为假：and 1=2</p>
-<p><a href="https://sm.ms/image/jZ7aEmdAHCND36S" target="_blank"><img src="https://i.loli.net/2021/10/08/jZ7aEmdAHCND36S.png" ></a></p>
-<p><strong>自己的一些做题过程</strong></p>
-<p>看到提示里的 id 字样，用到？(get) 指令，得到一个 id</p>
-<p><a href="https://sm.ms/image/uyGpZ1rg2hMCeXV" target="_blank"><img src="https://i.loli.net/2021/10/08/uyGpZ1rg2hMCeXV.png" ></a></p>
-<p>之后加入’，会发现出现了 SQL syntax 的报错，则存在 SQL 漏洞</p>
-<p><a href="https://sm.ms/image/eQLPclu7mkpz4Ng" target="_blank"><img src="https://i.loli.net/2021/10/08/eQLPclu7mkpz4Ng.png" ></a></p>
-<p>这时候用 order by 指令可以知道数据库共有三列</p>
-<p>并用查库指令知道数据库的资料</p>
-<p><a href="https://sm.ms/image/5fsKBE3dhAWnRzO" target="_blank"><img src="https://i.loli.net/2021/10/08/5fsKBE3dhAWnRzO.png" ></a></p>
-<p>再分别用查表指令</p>
-<p><a href="https://sm.ms/image/COTStXn7dKyW5Qs" target="_blank"><img src="https://i.loli.net/2021/10/08/COTStXn7dKyW5Qs.png" ></a></p>
-<p>这里涉及单引号问题（我现在也不清楚单引号问题是什么）可改 16 进制表示（0x……）</p>
-<p><a href="https://sm.ms/image/ZioVd7aKuhgTCEB" target="_blank"><img src="https://i.loli.net/2021/10/08/ZioVd7aKuhgTCEB.png" ></a></p>
-<p>查列</p>
-<p><a href="https://sm.ms/image/FUKJVSbd4IzQ1PL" target="_blank"><img src="https://i.loli.net/2021/10/08/FUKJVSbd4IzQ1PL.png" ></a></p>
-<p>改 16 进制</p>
-<p><a href="https://sm.ms/image/HV134FpxfEeAwrN" target="_blank"><img src="https://i.loli.net/2021/10/08/HV134FpxfEeAwrN.png" ></a></p>
-<p>查字段</p>
-<p><a href="https://sm.ms/image/ZxJq4zo1r6yHF79" target="_blank"><img src="https://i.loli.net/2021/10/09/ZxJq4zo1r6yHF79.png" ></a></p>
-<p>用 concat_ws 函数联合 group_concat 函数爆数据库</p>
-<p><a href="https://sm.ms/image/9IwizF48hADQMqL" target="_blank"><img src="https://i.loli.net/2021/10/09/9IwizF48hADQMqL.png" ></a></p>
-<p>学习时参考了：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1e441127Rd?p=4">https://www.bilibili.com/video/BV1e441127Rd?p=4</a></p>
-<p>​                           还有一些没记住地址的博客</p>
-<p>​                           还有炜刚学长的 blog</p>
+                <p><strong>POST 与 get 的区别：</strong></p>
+<p>POST 体现在提交数据上，而 get 体现于数据获取上</p>
+<p><strong>less 11 基于 POST 的单引号 sql 注入</strong></p>
+<p>首先用 bp 对 POST 数据进行抓包得到 post 码</p>
+<p><a href="https://sm.ms/image/7AgksHTzERBlaOv" target="_blank"><img src="https://s2.loli.net/2022/02/08/7AgksHTzERBlaOv.png" ></a></p>
+<p>之后可在最后的 post 码上进行数据的 sql 注入的操作</p>
+<p><a href="https://sm.ms/image/FyqelUTx1PENStX" target="_blank"><img src="https://s2.loli.net/2022/02/08/FyqelUTx1PENStX.png" ></a></p>
+<p>由于在 hackbar 上使用 post data 操作无反应（还未清楚原因）</p>
+<p>此处用 bp 上的预览图操作</p>
+<p><a href="https://sm.ms/image/UR41v2SDBkrdXKN" target="_blank"><img src="https://s2.loli.net/2022/02/08/UR41v2SDBkrdXKN.png" ></a> 当使用 order by 3 时，出现报错，可说明表仅有俩行。（union select 1，……）</p>
+<p>之后于 less 1 相似，以查库查表查字段的方式，依次查出内容即可</p>
+<p><a href="https://sm.ms/image/MhzQgFImybk5RYj" target="_blank"><img src="https://s2.loli.net/2022/02/08/MhzQgFImybk5RYj.png" ></a></p>
+<p>less 12~13 则是基于不同引号类型的 post sql 注入，步骤与 less11 相似</p>
+<p><strong>此处总结一下不同引号类型的 sql 注入：</strong></p>
+<p><strong>’</strong></p>
+<p><strong>&quot;</strong></p>
+<p><strong>’)</strong></p>
+<p><strong>&quot;)</strong></p>
+<p><strong>’))</strong></p>
+<p><strong>&quot;))</strong></p>
+<p>引号注入类型共有以上六种，做题手动操作时，只需依次列举输入即可。</p>
+<p><strong>less 14~16 基于 POST 类型的盲注输入：</strong></p>
+<p>在进行 less 15 时会发现，当输入正确，则仅有登入成功的提示，并无回显数据，而输入错误也只有登入失败的提示，可判断此处为盲注。</p>
+<p><a href="https://sm.ms/image/d2t9GaLU4567A3o" target="_blank"><img src="https://s2.loli.net/2022/02/08/d2t9GaLU4567A3o.png" ></a></p>
+<p><a href="https://sm.ms/image/6V7MxsQ4ovqzcE8" target="_blank"><img src="https://s2.loli.net/2022/02/08/6V7MxsQ4ovqzcE8.png" ></a></p>
+<p>此处可用 if 语句配合 sleep 函数来判断正误</p>
+<p><a href="https://sm.ms/image/WAlMRuCFIaJqNH5" target="_blank"><img src="https://s2.loli.net/2022/02/08/WAlMRuCFIaJqNH5.png" ></a></p>
+<p>当发现数据加载比之前更慢，可判断是 sleep 函数的延时效用。</p>
+<p>也可通过正误回显判断</p>
+<p><a href="https://sm.ms/image/3OrU1jJq9swEYTQ" target="_blank"><img src="https://s2.loli.net/2022/02/08/3OrU1jJq9swEYTQ.png" ></a></p>
+<p>也可用 bp 进行暴力破解</p>
+<p><a href="https://sm.ms/image/Gis82KyODcw1Z9P" target="_blank"><img src="https://s2.loli.net/2022/02/08/Gis82KyODcw1Z9P.png" ></a></p>
 
             </div>
 
@@ -264,8 +259,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://example.com/2021/10/08/%E6%96%B0%E6%89%8B%E5%B0%8F%E7%99%BD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%93sqli-lab%E9%9D%B6%E5%9C%BA%EF%BC%88less1%EF%BC%89%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://example.com/2022/02/08/%E5%9F%BA%E4%BA%8EPOST%E7%B1%BB%E5%9E%8B%E7%9A%84sql%E6%B3%A8%E5%85%A5/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2022/02/08/%E5%9F%BA%E4%BA%8EPOST%E7%B1%BB%E5%9E%8B%E7%9A%84sql%E6%B3%A8%E5%85%A5/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

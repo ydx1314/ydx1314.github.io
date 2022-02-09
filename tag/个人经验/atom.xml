@@ -3,13 +3,71 @@
     <id>http://example.com</id>
     <title>夜殿下的博客 • Posts by &#34;个人经验&#34; tag</title>
     <link href="http://example.com" />
-    <updated>2022-01-26T21:03:11.000Z</updated>
+    <updated>2022-02-09T10:09:50.000Z</updated>
     <category term="个人经验" />
     <category term="乱七八糟" />
     <category term="学习小结" />
     <category term="less 1" />
     <category term="个人感慨" />
     <category term="知识小结" />
+    <entry>
+        <id>http://example.com/2022/02/09/less17/</id>
+        <title>less17</title>
+        <link rel="alternate" href="http://example.com/2022/02/09/less17/"/>
+        <content type="html">&lt;p&gt;进入页面时，有提示 PASSWORD RESET，可判断从密码输入入手。输入已知用户名（正常情况需先得到正确的用户名才可进行以下后续操作），得到密码成功重置的信息。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/cwq2gIFM1APyna7&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/09/cwq2gIFM1APyna7.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此处会使用到 updatexl 函数&lt;/p&gt;
+&lt;p&gt;**updatexml 函数使用：**updatexml (1,concat (0x7e,(构造语句),0x7e),1)&lt;/p&gt;
+&lt;p&gt;其中 “构造语句” 为查库查表查列查字段的指令&lt;/p&gt;
+&lt;p&gt;concat 是：将所回显语句连接成一个字符串（因此回显会出现 error 报错字样，后面则是想要的信息）&lt;/p&gt;
+&lt;p&gt;可用 bp 抓包后，进行预览操作：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/PdXrA4k5S6GnLRp&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/09/PdXrA4k5S6GnLRp.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/2fjI43kit1LNMTJ&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/09/2fjI43kit1LNMTJ.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/QaA4XCNOhclq6g1&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/09/QaA4XCNOhclq6g1.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="个人经验" />
+        <updated>2022-02-09T10:09:50.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2022/02/08/%E5%9F%BA%E4%BA%8EPOST%E7%B1%BB%E5%9E%8B%E7%9A%84sql%E6%B3%A8%E5%85%A5/</id>
+        <title>基于POST类型的sql注入</title>
+        <link rel="alternate" href="http://example.com/2022/02/08/%E5%9F%BA%E4%BA%8EPOST%E7%B1%BB%E5%9E%8B%E7%9A%84sql%E6%B3%A8%E5%85%A5/"/>
+        <content type="html">&lt;p&gt;&lt;strong&gt;POST 与 get 的区别：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;POST 体现在提交数据上，而 get 体现于数据获取上&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;less 11 基于 POST 的单引号 sql 注入&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先用 bp 对 POST 数据进行抓包得到 post 码&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/7AgksHTzERBlaOv&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/08/7AgksHTzERBlaOv.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之后可在最后的 post 码上进行数据的 sql 注入的操作&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/FyqelUTx1PENStX&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/08/FyqelUTx1PENStX.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;由于在 hackbar 上使用 post data 操作无反应（还未清楚原因）&lt;/p&gt;
+&lt;p&gt;此处用 bp 上的预览图操作&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/UR41v2SDBkrdXKN&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/08/UR41v2SDBkrdXKN.png&#34; &gt;&lt;/a&gt; 当使用 order by 3 时，出现报错，可说明表仅有俩行。（union select 1，……）&lt;/p&gt;
+&lt;p&gt;之后于 less 1 相似，以查库查表查字段的方式，依次查出内容即可&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/MhzQgFImybk5RYj&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/08/MhzQgFImybk5RYj.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;less 12~13 则是基于不同引号类型的 post sql 注入，步骤与 less11 相似&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;此处总结一下不同引号类型的 sql 注入：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;’&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;quot;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;’)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;quot;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;’))&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;quot;))&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;引号注入类型共有以上六种，做题手动操作时，只需依次列举输入即可。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;less 14~16 基于 POST 类型的盲注输入：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在进行 less 15 时会发现，当输入正确，则仅有登入成功的提示，并无回显数据，而输入错误也只有登入失败的提示，可判断此处为盲注。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/d2t9GaLU4567A3o&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/08/d2t9GaLU4567A3o.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/6V7MxsQ4ovqzcE8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/08/6V7MxsQ4ovqzcE8.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此处可用 if 语句配合 sleep 函数来判断正误&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/WAlMRuCFIaJqNH5&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/08/WAlMRuCFIaJqNH5.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;当发现数据加载比之前更慢，可判断是 sleep 函数的延时效用。&lt;/p&gt;
+&lt;p&gt;也可通过正误回显判断&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/3OrU1jJq9swEYTQ&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/08/3OrU1jJq9swEYTQ.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;也可用 bp 进行暴力破解&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/Gis82KyODcw1Z9P&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/08/Gis82KyODcw1Z9P.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="个人经验" />
+        <updated>2022-02-08T14:49:41.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2022/01/27/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E5%92%8C%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8%E7%9A%84%E7%AE%80%E6%98%93%E6%89%8B%E5%8A%A8%E6%93%8D%E4%BD%9C/</id>
         <title>布尔盲注和时间盲注的简易手动操作</title>

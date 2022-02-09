@@ -22,7 +22,7 @@
             <description><![CDATA[ &lt;p&gt;&lt;strong&gt;首先总结一些，在学习 less 1 时的一些 sql 注入的语言&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;注释符 (即之后的语句不再执行）： --+、-- （空格）【/**/ 可代替空格】、#&lt;/p&gt;
 &lt;p&gt;查库：select schema_name from information_schema.schemata&lt;/p&gt;
-&lt;p&gt;查表：select table_name from information_schema.tables where table_name=‘security’&lt;/p&gt;
+&lt;p&gt;查表：select table_name from information_schema.tables where table_schema=‘security’&lt;/p&gt;
 &lt;p&gt;查列：select column_name from information_schema.columns where table_name=‘users’&lt;/p&gt;
 &lt;p&gt;order by _(数字)&lt;/p&gt;
 &lt;p&gt;union select (联合查询)&lt;/p&gt;

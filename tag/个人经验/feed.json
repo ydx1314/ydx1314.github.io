@@ -5,6 +5,26 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2022/02/09/less17/",
+            "url": "http://example.com/2022/02/09/less17/",
+            "title": "less17",
+            "date_published": "2022-02-09T10:09:50.000Z",
+            "content_html": "<p>进入页面时，有提示 PASSWORD RESET，可判断从密码输入入手。输入已知用户名（正常情况需先得到正确的用户名才可进行以下后续操作），得到密码成功重置的信息。</p>\n<p><a href=\"https://sm.ms/image/cwq2gIFM1APyna7\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/09/cwq2gIFM1APyna7.png\" ></a></p>\n<p>此处会使用到 updatexl 函数</p>\n<p>**updatexml 函数使用：**updatexml (1,concat (0x7e,(构造语句),0x7e),1)</p>\n<p>其中 “构造语句” 为查库查表查列查字段的指令</p>\n<p>concat 是：将所回显语句连接成一个字符串（因此回显会出现 error 报错字样，后面则是想要的信息）</p>\n<p>可用 bp 抓包后，进行预览操作：</p>\n<p><a href=\"https://sm.ms/image/PdXrA4k5S6GnLRp\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/09/PdXrA4k5S6GnLRp.png\" ></a></p>\n<p><a href=\"https://sm.ms/image/2fjI43kit1LNMTJ\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/09/2fjI43kit1LNMTJ.png\" ></a></p>\n<p><a href=\"https://sm.ms/image/QaA4XCNOhclq6g1\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/09/QaA4XCNOhclq6g1.png\" ></a></p>\n",
+            "tags": [
+                "个人经验"
+            ]
+        },
+        {
+            "id": "http://example.com/2022/02/08/%E5%9F%BA%E4%BA%8EPOST%E7%B1%BB%E5%9E%8B%E7%9A%84sql%E6%B3%A8%E5%85%A5/",
+            "url": "http://example.com/2022/02/08/%E5%9F%BA%E4%BA%8EPOST%E7%B1%BB%E5%9E%8B%E7%9A%84sql%E6%B3%A8%E5%85%A5/",
+            "title": "基于POST类型的sql注入",
+            "date_published": "2022-02-08T14:49:41.000Z",
+            "content_html": "<p><strong>POST 与 get 的区别：</strong></p>\n<p>POST 体现在提交数据上，而 get 体现于数据获取上</p>\n<p><strong>less 11 基于 POST 的单引号 sql 注入</strong></p>\n<p>首先用 bp 对 POST 数据进行抓包得到 post 码</p>\n<p><a href=\"https://sm.ms/image/7AgksHTzERBlaOv\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/08/7AgksHTzERBlaOv.png\" ></a></p>\n<p>之后可在最后的 post 码上进行数据的 sql 注入的操作</p>\n<p><a href=\"https://sm.ms/image/FyqelUTx1PENStX\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/08/FyqelUTx1PENStX.png\" ></a></p>\n<p>由于在 hackbar 上使用 post data 操作无反应（还未清楚原因）</p>\n<p>此处用 bp 上的预览图操作</p>\n<p><a href=\"https://sm.ms/image/UR41v2SDBkrdXKN\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/08/UR41v2SDBkrdXKN.png\" ></a> 当使用 order by 3 时，出现报错，可说明表仅有俩行。（union select 1，……）</p>\n<p>之后于 less 1 相似，以查库查表查字段的方式，依次查出内容即可</p>\n<p><a href=\"https://sm.ms/image/MhzQgFImybk5RYj\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/08/MhzQgFImybk5RYj.png\" ></a></p>\n<p>less 12~13 则是基于不同引号类型的 post sql 注入，步骤与 less11 相似</p>\n<p><strong>此处总结一下不同引号类型的 sql 注入：</strong></p>\n<p><strong>’</strong></p>\n<p><strong>&quot;</strong></p>\n<p><strong>’)</strong></p>\n<p><strong>&quot;)</strong></p>\n<p><strong>’))</strong></p>\n<p><strong>&quot;))</strong></p>\n<p>引号注入类型共有以上六种，做题手动操作时，只需依次列举输入即可。</p>\n<p><strong>less 14~16 基于 POST 类型的盲注输入：</strong></p>\n<p>在进行 less 15 时会发现，当输入正确，则仅有登入成功的提示，并无回显数据，而输入错误也只有登入失败的提示，可判断此处为盲注。</p>\n<p><a href=\"https://sm.ms/image/d2t9GaLU4567A3o\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/08/d2t9GaLU4567A3o.png\" ></a></p>\n<p><a href=\"https://sm.ms/image/6V7MxsQ4ovqzcE8\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/08/6V7MxsQ4ovqzcE8.png\" ></a></p>\n<p>此处可用 if 语句配合 sleep 函数来判断正误</p>\n<p><a href=\"https://sm.ms/image/WAlMRuCFIaJqNH5\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/08/WAlMRuCFIaJqNH5.png\" ></a></p>\n<p>当发现数据加载比之前更慢，可判断是 sleep 函数的延时效用。</p>\n<p>也可通过正误回显判断</p>\n<p><a href=\"https://sm.ms/image/3OrU1jJq9swEYTQ\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/08/3OrU1jJq9swEYTQ.png\" ></a></p>\n<p>也可用 bp 进行暴力破解</p>\n<p><a href=\"https://sm.ms/image/Gis82KyODcw1Z9P\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/08/Gis82KyODcw1Z9P.png\" ></a></p>\n",
+            "tags": [
+                "个人经验"
+            ]
+        },
+        {
             "id": "http://example.com/2022/01/27/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E5%92%8C%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8%E7%9A%84%E7%AE%80%E6%98%93%E6%89%8B%E5%8A%A8%E6%93%8D%E4%BD%9C/",
             "url": "http://example.com/2022/01/27/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E5%92%8C%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8%E7%9A%84%E7%AE%80%E6%98%93%E6%89%8B%E5%8A%A8%E6%93%8D%E4%BD%9C/",
             "title": "布尔盲注和时间盲注的简易手动操作",
