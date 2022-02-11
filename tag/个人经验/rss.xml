@@ -5,14 +5,40 @@
         <link>http://example.com</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 09 Feb 2022 18:09:50 +0800</pubDate>
-        <lastBuildDate>Wed, 09 Feb 2022 18:09:50 +0800</lastBuildDate>
+        <pubDate>Thu, 10 Feb 2022 14:36:38 +0800</pubDate>
+        <lastBuildDate>Thu, 10 Feb 2022 14:36:38 +0800</lastBuildDate>
         <category>个人经验</category>
         <category>乱七八糟</category>
         <category>学习小结</category>
-        <category>less 1</category>
         <category>个人感慨</category>
+        <category>less 1</category>
         <category>知识小结</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/02/10/less%2018-19/</guid>
+            <title>less18~19</title>
+            <link>http://example.com/2022/02/10/less%2018-19/</link>
+            <category>个人经验</category>
+            <pubDate>Thu, 10 Feb 2022 14:36:38 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;strong&gt;Less 18：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;进入 18 关后，输入用户名和密码，回显 user agent=…………&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/N2Ug6SkJb5tMPd3&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/10/N2Ug6SkJb5tMPd3.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;再因为在 id 和 passwd 上输入 ‘ 均无回显&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/75RLDZY8Td6Iego&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/10/75RLDZY8Td6Iego.png&#34; &gt;&lt;/a&gt; 可猜测，注入点在 user agent 上，试验之后可证明&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/PG9oRMTA4xi2V3d&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/10/PG9oRMTA4xi2V3d.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此处可使用 extractvalue 函数：&lt;/p&gt;
+&lt;p&gt;**extractvalue 函数使用：**extractvalue (1,concat (0x7e,(构造语句),0x7e))&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/K2ewRiSuLzDvcJd&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/10/K2ewRiSuLzDvcJd.png&#34; &gt;&lt;/a&gt;（此处需注意单引号的闭合）&lt;/p&gt;
+&lt;p&gt;之后和之前一样进行查库查表的操作&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/4pKriclkov1zJVx&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/10/4pKriclkov1zJVx.png&#34; &gt;&lt;/a&gt;&lt;a href=&#34;https://sm.ms/image/yAs5tYT9VP2Zirv&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/10/yAs5tYT9VP2Zirv.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Less 19：&lt;/p&gt;
+&lt;p&gt;与 18 关相似，唯一不同的是，18 关的注入点在 user agent，而 19 关的注入点在 referer 上&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/Q7SOqTNaFcWPix8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/10/Q7SOqTNaFcWPix8.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;再次使用 extractvalue 函数：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/P3KLjinXrhZa9cH&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/10/P3KLjinXrhZa9cH.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/ZwuvsWO4BIYrzFq&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/10/ZwuvsWO4BIYrzFq.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之后的操作类似&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2022/02/09/less17/</guid>
             <title>less17</title>

@@ -5,6 +5,16 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2022/02/10/less%2018-19/",
+            "url": "http://example.com/2022/02/10/less%2018-19/",
+            "title": "less18~19",
+            "date_published": "2022-02-10T06:36:38.000Z",
+            "content_html": "<p><strong>Less 18：</strong></p>\n<p>进入 18 关后，输入用户名和密码，回显 user agent=…………</p>\n<p><a href=\"https://sm.ms/image/N2Ug6SkJb5tMPd3\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/10/N2Ug6SkJb5tMPd3.png\" ></a></p>\n<p>再因为在 id 和 passwd 上输入 ‘ 均无回显</p>\n<p><a href=\"https://sm.ms/image/75RLDZY8Td6Iego\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/10/75RLDZY8Td6Iego.png\" ></a> 可猜测，注入点在 user agent 上，试验之后可证明</p>\n<p><a href=\"https://sm.ms/image/PG9oRMTA4xi2V3d\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/10/PG9oRMTA4xi2V3d.png\" ></a></p>\n<p>此处可使用 extractvalue 函数：</p>\n<p>**extractvalue 函数使用：**extractvalue (1,concat (0x7e,(构造语句),0x7e))</p>\n<p><a href=\"https://sm.ms/image/K2ewRiSuLzDvcJd\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/10/K2ewRiSuLzDvcJd.png\" ></a>（此处需注意单引号的闭合）</p>\n<p>之后和之前一样进行查库查表的操作</p>\n<p><a href=\"https://sm.ms/image/4pKriclkov1zJVx\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/10/4pKriclkov1zJVx.png\" ></a><a href=\"https://sm.ms/image/yAs5tYT9VP2Zirv\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/10/yAs5tYT9VP2Zirv.png\" ></a></p>\n<p>Less 19：</p>\n<p>与 18 关相似，唯一不同的是，18 关的注入点在 user agent，而 19 关的注入点在 referer 上</p>\n<p><a href=\"https://sm.ms/image/Q7SOqTNaFcWPix8\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/10/Q7SOqTNaFcWPix8.png\" ></a></p>\n<p>再次使用 extractvalue 函数：</p>\n<p><a href=\"https://sm.ms/image/P3KLjinXrhZa9cH\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/10/P3KLjinXrhZa9cH.png\" ></a></p>\n<p><a href=\"https://sm.ms/image/ZwuvsWO4BIYrzFq\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/10/ZwuvsWO4BIYrzFq.png\" ></a></p>\n<p>之后的操作类似</p>\n",
+            "tags": [
+                "个人经验"
+            ]
+        },
+        {
             "id": "http://example.com/2022/02/09/less17/",
             "url": "http://example.com/2022/02/09/less17/",
             "title": "less17",
