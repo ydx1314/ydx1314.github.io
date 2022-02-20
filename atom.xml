@@ -3,18 +3,39 @@
     <id>http://example.com</id>
     <title>夜殿下的博客</title>
     <link href="http://example.com" />
-    <updated>2022-02-15T11:07:46.000Z</updated>
+    <updated>2022-02-20T14:55:41.000Z</updated>
     <category term="个人经验" />
     <category term="乱七八糟" />
     <category term="学习小结" />
-    <category term="个人感慨" />
     <category term="less 1" />
+    <category term="个人感慨" />
     <category term="知识小结" />
+    <entry>
+        <id>http://example.com/2022/02/20/upload-labs%E9%9D%B6%E5%9C%BAless1/</id>
+        <title>upload-labs靶场less1</title>
+        <link rel="alternate" href="http://example.com/2022/02/20/upload-labs%E9%9D%B6%E5%9C%BAless1/"/>
+        <content type="html">&lt;p&gt;由于网站限制了文件上传的格式，可试着将一句话木马写入图片中，进行上传&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/gWmpVNHrcuSKbaY&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/21/gWmpVNHrcuSKbaY.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;再使用 bp 进行抓包修改文件的后缀名为 php&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/I3d1qNOiYyGT4F8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/21/I3d1qNOiYyGT4F8.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最后使用中国菜刀进行切入&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/Iy74LguBloREKrY&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/21/Iy74LguBloREKrY.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;实现绕过 js 前端检测的效果&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/I3d1qNOiYyGT4F8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/21/I3d1qNOiYyGT4F8.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="个人经验" />
+        <updated>2022-02-20T14:55:41.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2022/02/15/%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/</id>
         <title>堆叠注入</title>
         <link rel="alternate" href="http://example.com/2022/02/15/%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/"/>
-        <content type="html"></content>
+        <content type="html">&lt;p&gt;可在一句完整的话用；结束后，再续上一段 sql 语句，再以分号结尾。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/FevdIiWDgJtKrwA&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/18/FevdIiWDgJtKrwA.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/qyAkmHbPW673cex&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/18/qyAkmHbPW673cex.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;实现注入操作（可用于传输木马）&lt;/p&gt;
+</content>
+        <category term="个人经验" />
         <updated>2022-02-15T11:07:46.000Z</updated>
     </entry>
     <entry>

@@ -5,14 +5,42 @@
         <link>http://example.com</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 15 Feb 2022 17:23:24 +0800</pubDate>
-        <lastBuildDate>Tue, 15 Feb 2022 17:23:24 +0800</lastBuildDate>
+        <pubDate>Sun, 20 Feb 2022 22:55:41 +0800</pubDate>
+        <lastBuildDate>Sun, 20 Feb 2022 22:55:41 +0800</lastBuildDate>
         <category>个人经验</category>
         <category>乱七八糟</category>
         <category>学习小结</category>
-        <category>个人感慨</category>
         <category>less 1</category>
+        <category>个人感慨</category>
         <category>知识小结</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/02/20/upload-labs%E9%9D%B6%E5%9C%BAless1/</guid>
+            <title>upload-labs靶场less1</title>
+            <link>http://example.com/2022/02/20/upload-labs%E9%9D%B6%E5%9C%BAless1/</link>
+            <category>个人经验</category>
+            <pubDate>Sun, 20 Feb 2022 22:55:41 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;由于网站限制了文件上传的格式，可试着将一句话木马写入图片中，进行上传&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/gWmpVNHrcuSKbaY&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/21/gWmpVNHrcuSKbaY.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;再使用 bp 进行抓包修改文件的后缀名为 php&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/I3d1qNOiYyGT4F8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/21/I3d1qNOiYyGT4F8.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最后使用中国菜刀进行切入&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/Iy74LguBloREKrY&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/21/Iy74LguBloREKrY.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;实现绕过 js 前端检测的效果&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/I3d1qNOiYyGT4F8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/21/I3d1qNOiYyGT4F8.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/02/15/%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/</guid>
+            <title>堆叠注入</title>
+            <link>http://example.com/2022/02/15/%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/</link>
+            <category>个人经验</category>
+            <pubDate>Tue, 15 Feb 2022 19:07:46 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;可在一句完整的话用；结束后，再续上一段 sql 语句，再以分号结尾。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/FevdIiWDgJtKrwA&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/18/FevdIiWDgJtKrwA.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sm.ms/image/qyAkmHbPW673cex&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/18/qyAkmHbPW673cex.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;实现注入操作（可用于传输木马）&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2022/02/15/%E5%AE%BD%E5%AD%97%E8%8A%82%E6%B3%A8%E5%85%A5/</guid>
             <title>宽字节注入</title>
