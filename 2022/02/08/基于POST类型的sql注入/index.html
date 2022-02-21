@@ -165,38 +165,38 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p><strong>POST 与 get 的区别：</strong></p>
-<p>POST 体现在提交数据上，而 get 体现于数据获取上</p>
-<p><strong>less 11 基于 POST 的单引号 sql 注入</strong></p>
-<p>首先用 bp 对 POST 数据进行抓包得到 post 码</p>
+                <p> <strong>POST与get的区别：</strong></p>
+<p> POST体现在提交数据上，而get体现于数据获取上</p>
+<p> <strong>less 11 基于POST的单引号sql注入</strong></p>
+<p> 首先用bp对POST数据进行抓包得到post码</p>
 <p><a href="https://sm.ms/image/7AgksHTzERBlaOv" target="_blank"><img src="https://s2.loli.net/2022/02/08/7AgksHTzERBlaOv.png" ></a></p>
-<p>之后可在最后的 post 码上进行数据的 sql 注入的操作</p>
+<p> 之后可在最后的post码上进行数据的sql注入的操作</p>
 <p><a href="https://sm.ms/image/FyqelUTx1PENStX" target="_blank"><img src="https://s2.loli.net/2022/02/08/FyqelUTx1PENStX.png" ></a></p>
-<p>由于在 hackbar 上使用 post data 操作无反应（还未清楚原因）</p>
-<p>此处用 bp 上的预览图操作</p>
-<p><a href="https://sm.ms/image/UR41v2SDBkrdXKN" target="_blank"><img src="https://s2.loli.net/2022/02/08/UR41v2SDBkrdXKN.png" ></a> 当使用 order by 3 时，出现报错，可说明表仅有俩行。（union select 1，……）</p>
-<p>之后于 less 1 相似，以查库查表查字段的方式，依次查出内容即可</p>
+<p> 由于在hackbar上使用post data操作无反应（还未清楚原因）</p>
+<p> 此处用bp上的预览图操作</p>
+<p> <a href="https://sm.ms/image/UR41v2SDBkrdXKN" target="_blank"><img src="https://s2.loli.net/2022/02/08/UR41v2SDBkrdXKN.png" ></a> 当使用order by 3时，出现报错，可说明表仅有俩行。（union select 1，……）</p>
+<p> 之后于less 1相似，以查库查表查字段的方式，依次查出内容即可</p>
 <p><a href="https://sm.ms/image/MhzQgFImybk5RYj" target="_blank"><img src="https://s2.loli.net/2022/02/08/MhzQgFImybk5RYj.png" ></a></p>
-<p>less 12~13 则是基于不同引号类型的 post sql 注入，步骤与 less11 相似</p>
-<p><strong>此处总结一下不同引号类型的 sql 注入：</strong></p>
-<p><strong>’</strong></p>
-<p><strong>&quot;</strong></p>
-<p><strong>’)</strong></p>
-<p><strong>&quot;)</strong></p>
-<p><strong>’))</strong></p>
-<p><strong>&quot;))</strong></p>
-<p>引号注入类型共有以上六种，做题手动操作时，只需依次列举输入即可。</p>
-<p><strong>less 14~16 基于 POST 类型的盲注输入：</strong></p>
-<p>在进行 less 15 时会发现，当输入正确，则仅有登入成功的提示，并无回显数据，而输入错误也只有登入失败的提示，可判断此处为盲注。</p>
-<p><a href="https://sm.ms/image/d2t9GaLU4567A3o" target="_blank"><img src="https://s2.loli.net/2022/02/08/d2t9GaLU4567A3o.png" ></a></p>
+<p>  less 12~13 则是基于不同引号类型的post sql注入，步骤与less11相似</p>
+<p> <strong>此处总结一下不同引号类型的sql注入：</strong></p>
+<p><strong>‘</strong></p>
+<p><strong>“</strong></p>
+<p><strong>‘)</strong></p>
+<p><strong>“)</strong></p>
+<p><strong>‘))</strong></p>
+<p><strong>“))</strong></p>
+<p> 引号注入类型共有以上六种，做题手动操作时，只需依次列举输入即可。</p>
+<p> <strong>less 14~16基于POST类型的盲注输入：</strong></p>
+<p> 在进行less 15时会发现，当输入正确，则仅有登入成功的提示，并无回显数据，而输入错误也只有登入失败的提示，可判断此处为盲注。</p>
+<p> <a href="https://sm.ms/image/d2t9GaLU4567A3o" target="_blank"><img src="https://s2.loli.net/2022/02/08/d2t9GaLU4567A3o.png" ></a></p>
 <p><a href="https://sm.ms/image/6V7MxsQ4ovqzcE8" target="_blank"><img src="https://s2.loli.net/2022/02/08/6V7MxsQ4ovqzcE8.png" ></a></p>
-<p>此处可用 if 语句配合 sleep 函数来判断正误</p>
-<p><a href="https://sm.ms/image/WAlMRuCFIaJqNH5" target="_blank"><img src="https://s2.loli.net/2022/02/08/WAlMRuCFIaJqNH5.png" ></a></p>
-<p>当发现数据加载比之前更慢，可判断是 sleep 函数的延时效用。</p>
-<p>也可通过正误回显判断</p>
-<p><a href="https://sm.ms/image/3OrU1jJq9swEYTQ" target="_blank"><img src="https://s2.loli.net/2022/02/08/3OrU1jJq9swEYTQ.png" ></a></p>
-<p>也可用 bp 进行暴力破解</p>
-<p><a href="https://sm.ms/image/Gis82KyODcw1Z9P" target="_blank"><img src="https://s2.loli.net/2022/02/08/Gis82KyODcw1Z9P.png" ></a></p>
+<p> 此处可用if语句配合sleep函数来判断正误</p>
+<p> <a href="https://sm.ms/image/WAlMRuCFIaJqNH5" target="_blank"><img src="https://s2.loli.net/2022/02/08/WAlMRuCFIaJqNH5.png" ></a></p>
+<p>当发现数据加载比之前更慢，可判断是sleep函数的延时效用。</p>
+<p> 也可通过正误回显判断</p>
+<p> <a href="https://sm.ms/image/3OrU1jJq9swEYTQ" target="_blank"><img src="https://s2.loli.net/2022/02/08/3OrU1jJq9swEYTQ.png" ></a></p>
+<p> 也可用bp进行暴力破解</p>
+<p> <a href="https://sm.ms/image/Gis82KyODcw1Z9P" target="_blank"><img src="https://s2.loli.net/2022/02/08/Gis82KyODcw1Z9P.png" ></a></p>
 
             </div>
 

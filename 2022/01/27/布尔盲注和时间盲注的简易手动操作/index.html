@@ -165,23 +165,23 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>在 less 5 这关时，会发现按照之前的方法输入？id=1’–+，他并不会给你想要的信息，而是会回显 you are in</p>
+                <p> 在less 5这关时，会发现按照之前的方法输入?id=1’–+，他并不会给你想要的信息，而是会回显you are in</p>
 <p><a href="https://sm.ms/image/fBMIk3NUyjdrwtF" target="_blank"><img src="https://s2.loli.net/2022/01/21/fBMIk3NUyjdrwtF.png" ></a></p>
-<p>可以判断，该处注入方式为布尔盲注（即只有正确了只回显 you are in）</p>
-<p>此处可以用 length (database ())=? 来推出 database 数据库的库名有几个字符长度</p>
+<p> 可以判断，该处注入方式为布尔盲注（即只有正确了只回显you are in）</p>
+<p> 此处可以用length(database())=?来推出database数据库的库名有几个字符长度</p>
 <p><a href="https://sm.ms/image/nQZ5XT8pDf1bA34" target="_blank"><img src="https://s2.loli.net/2022/01/21/nQZ5XT8pDf1bA34.png" ></a></p>
-<p>而后可根据二分法 ascii (substr (database ()))=?（&gt;? 或 &lt;?）来推断库名</p>
-<p><em>PS. 其中 substr 括号内是数据库查找方式，也可以是查表查列查字段，详见 less1</em></p>
-<p><a href="https://sm.ms/image/VTzI9HZwkAKmhC8" target="_blank"><img src="https://s2.loli.net/2022/01/21/VTzI9HZwkAKmhC8.png" ></a></p>
-<p>less 6 是基于 less 5 的基础上，由单引号闭合改为了双引号闭合</p>
-<p><a href="https://sm.ms/image/HDB7CnPb3hZXp8V" target="_blank"><img src="https://s2.loli.net/2022/01/21/HDB7CnPb3hZXp8V.png" ></a></p>
-<p><strong>if 函数使用</strong></p>
-<p>if (条件，正确回显，错误回显)</p>
-<p><a href="https://sm.ms/image/5v2WN1z6pKdkfbX" target="_blank"><img src="https://s2.loli.net/2022/01/27/5v2WN1z6pKdkfbX.png" ></a></p>
-<p><strong>sleep 睡眠使用</strong></p>
-<p><a href="https://sm.ms/image/vPkOWYBQ35XRnAw" target="_blank"><img src="https://s2.loli.net/2022/01/27/vPkOWYBQ35XRnAw.png" ></a></p>
-<p>如图可知，程序运行（睡眠）了 5s。</p>
-<p>之后的第八关和第九关、第十关，均可用 if 和 sleep 来手动操作（区别就是 id=1 后的闭合符合不同，详见第 less 1~4。</p>
+<p> 而后可根据二分法ascii(substr(database()))=?（&gt;? 或 &lt;?）来推断库名</p>
+<p> <em>PS.其中substr括号内是数据库查找方式，也可以是查表查列查字段，详见less1</em></p>
+<p> <a href="https://sm.ms/image/VTzI9HZwkAKmhC8" target="_blank"><img src="https://s2.loli.net/2022/01/21/VTzI9HZwkAKmhC8.png" ></a></p>
+<p> less 6是基于less 5的基础上，由单引号闭合改为了双引号闭合</p>
+<p> <a href="https://sm.ms/image/HDB7CnPb3hZXp8V" target="_blank"><img src="https://s2.loli.net/2022/01/21/HDB7CnPb3hZXp8V.png" ></a></p>
+<p> <strong>if函数使用</strong></p>
+<p> if(条件,正确回显,错误回显)</p>
+<p> <a href="https://sm.ms/image/5v2WN1z6pKdkfbX" target="_blank"><img src="https://s2.loli.net/2022/01/27/5v2WN1z6pKdkfbX.png" ></a></p>
+<p> <strong>sleep睡眠使用</strong></p>
+<p> <a href="https://sm.ms/image/vPkOWYBQ35XRnAw" target="_blank"><img src="https://s2.loli.net/2022/01/27/vPkOWYBQ35XRnAw.png" ></a></p>
+<p> 如图可知，程序运行（睡眠）了5s。</p>
+<p> 之后的第八关和第九关、第十关，均可用if和sleep来手动操作（区别就是id=1后的闭合符合不同，详见第less 1~4。</p>
 
             </div>
 
