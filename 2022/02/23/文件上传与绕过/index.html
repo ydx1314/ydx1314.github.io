@@ -161,28 +161,18 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >less18~19</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >文件上传与绕过</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p><strong>Less 18：</strong></p>
-<p>进入 18 关后，输入用户名和密码，回显 user agent=…………</p>
-<p><a href="https://sm.ms/image/N2Ug6SkJb5tMPd3" target="_blank"><img src="https://s2.loli.net/2022/02/10/N2Ug6SkJb5tMPd3.png" ></a></p>
-<p>再因为在 id 和 passwd 上输入 ‘ 均无回显</p>
-<p><a href="https://sm.ms/image/75RLDZY8Td6Iego" target="_blank"><img src="https://s2.loli.net/2022/02/10/75RLDZY8Td6Iego.png" ></a> 可猜测，注入点在 user agent 上，试验之后可证明</p>
-<p><a href="https://sm.ms/image/PG9oRMTA4xi2V3d" target="_blank"><img src="https://s2.loli.net/2022/02/10/PG9oRMTA4xi2V3d.png" ></a></p>
-<p>此处可使用 extractvalue 函数：</p>
-<p>**extractvalue 函数使用：**extractvalue (1,concat (0x7e,(构造语句),0x7e))</p>
-<p><a href="https://sm.ms/image/K2ewRiSuLzDvcJd" target="_blank"><img src="https://s2.loli.net/2022/02/10/K2ewRiSuLzDvcJd.png" ></a>（此处需注意单引号的闭合）</p>
-<p>之后和之前一样进行查库查表的操作</p>
-<p><a href="https://sm.ms/image/4pKriclkov1zJVx" target="_blank"><img src="https://s2.loli.net/2022/02/10/4pKriclkov1zJVx.png" ></a><a href="https://sm.ms/image/yAs5tYT9VP2Zirv" target="_blank"><img src="https://s2.loli.net/2022/02/10/yAs5tYT9VP2Zirv.png" ></a></p>
-<p>Less 19：</p>
-<p>与 18 关相似，唯一不同的是，18 关的注入点在 user agent，而 19 关的注入点在 referer 上</p>
-<p><a href="https://sm.ms/image/Q7SOqTNaFcWPix8" target="_blank"><img src="https://s2.loli.net/2022/02/10/Q7SOqTNaFcWPix8.png" ></a></p>
-<p>再次使用 extractvalue 函数：</p>
-<p><a href="https://sm.ms/image/P3KLjinXrhZa9cH" target="_blank"><img src="https://s2.loli.net/2022/02/10/P3KLjinXrhZa9cH.png" ></a></p>
-<p><a href="https://sm.ms/image/ZwuvsWO4BIYrzFq" target="_blank"><img src="https://s2.loli.net/2022/02/10/ZwuvsWO4BIYrzFq.png" ></a></p>
-<p>之后的操作类似</p>
+                <p>由于网站限制了文件上传的格式，可试着将一句话木马写入图片中，进行上传</p>
+<p><a href="https://sm.ms/image/gWmpVNHrcuSKbaY" target="_blank"><img src="https://s2.loli.net/2022/02/21/gWmpVNHrcuSKbaY.png" ></a></p>
+<p>再使用 bp 进行抓包修改文件的后缀名为 php</p>
+<p><a href="https://sm.ms/image/I3d1qNOiYyGT4F8" target="_blank"><img src="https://s2.loli.net/2022/02/21/I3d1qNOiYyGT4F8.png" ></a></p>
+<p>最后使用中国菜刀进行切入</p>
+<p><a href="https://sm.ms/image/Iy74LguBloREKrY" target="_blank"><img src="https://s2.loli.net/2022/02/21/Iy74LguBloREKrY.png" ></a></p>
+<p>实现绕过 js 前端检测的效果</p>
+<p><a href="https://sm.ms/image/I3d1qNOiYyGT4F8" target="_blank"><img src="https://s2.loli.net/2022/02/21/I3d1qNOiYyGT4F8.png" ></a></p>
 
             </div>
 
@@ -245,8 +235,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2022/02/10/less%2018-19/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://example.com/2022/02/10/less%2018-19/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://example.com/2022/02/23/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8E%E7%BB%95%E8%BF%87/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2022/02/23/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8E%E7%BB%95%E8%BF%87/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

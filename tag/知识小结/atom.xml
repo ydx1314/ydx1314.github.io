@@ -5,20 +5,29 @@
     <link href="http://example.com" />
     <updated>2021-12-19T05:25:49.000Z</updated>
     <category term="个人经验" />
-    <category term="乱七八糟" />
     <category term="学习小结" />
+    <category term="乱七八糟" />
+    <category term="期初考核" />
     <category term="less 1" />
-    <category term="知识小结" />
     <category term="个人感慨" />
+    <category term="知识小结" />
     <entry>
         <id>http://example.com/2021/12/19/%E7%9B%B2%E6%B3%A8%E8%84%9A%E6%9C%AC%E7%9A%84%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/</id>
         <title>盲注脚本的简要总结</title>
         <link rel="alternate" href="http://example.com/2021/12/19/%E7%9B%B2%E6%B3%A8%E8%84%9A%E6%9C%AC%E7%9A%84%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/"/>
-        <content type="html">&lt;p&gt; import requests   //引用的数据库名称&lt;br&gt;import time&lt;/p&gt;
-&lt;p&gt;url:”网址”&lt;/p&gt;
-&lt;p&gt;dict=””          //字典内容，自己编写&lt;/p&gt;
-&lt;p&gt;flag=””        //输出的flag？&lt;/p&gt;
-&lt;p&gt;for i in range(0,11):&lt;br&gt;for char in dict:                                          //输出字典内容&lt;br&gt;   payload=”and substr  …………”             //输入对应查询函数&lt;br&gt;   url=url+payload&lt;br&gt;   print(url)&lt;br&gt;   r=requests.get(url)&lt;br&gt;   if “are” in r.text:                     // 判断are是否在r.text文件内&lt;br&gt;     flag+=char&lt;/p&gt;
+        <content type="html">&lt;p&gt;import requests   // 引用的数据库名称&lt;br&gt;
+ import time&lt;/p&gt;
+&lt;p&gt;url:“网址”&lt;/p&gt;
+&lt;p&gt;dict=&amp;quot;&amp;quot;          // 字典内容，自己编写&lt;/p&gt;
+&lt;p&gt;flag=&amp;quot;&amp;quot;        // 输出的 flag？&lt;/p&gt;
+&lt;p&gt;for i in range(0,11):&lt;br&gt;
+for char in dict:                                          // 输出字典内容&lt;br&gt;
+ payload=“and substr  …………”             // 输入对应查询函数&lt;br&gt;
+ url=url+payload&lt;br&gt;
+print(url)&lt;br&gt;
+r=requests.get(url)&lt;br&gt;
+ if “are” in r.text:                     // 判断 are 是否在 r.text 文件内&lt;br&gt;
+ flag+=char&lt;/p&gt;
 &lt;p&gt;print(flag)&lt;/p&gt;
 </content>
         <category term="知识小结" />
