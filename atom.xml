@@ -5,8 +5,8 @@
     <link href="http://example.com" />
     <updated>2022-02-26T10:29:22.000Z</updated>
     <category term="个人经验" />
-    <category term="学习小结" />
     <category term="乱七八糟" />
+    <category term="学习小结" />
     <category term="期初考核" />
     <category term="less 1" />
     <category term="个人感慨" />
@@ -82,10 +82,11 @@
         <id>http://example.com/2022/02/15/%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/</id>
         <title>堆叠注入</title>
         <link rel="alternate" href="http://example.com/2022/02/15/%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/"/>
-        <content type="html">&lt;p&gt;可在一句完整的话用；结束后，再续上一段 sql 语句，再以分号结尾。&lt;/p&gt;
+        <content type="html">&lt;p&gt;可在一句完整的话用；结束后，再续上一段 sql 语句，再以&lt;strong&gt;分号&lt;/strong&gt;结尾。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sm.ms/image/FevdIiWDgJtKrwA&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/18/FevdIiWDgJtKrwA.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sm.ms/image/qyAkmHbPW673cex&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/02/18/qyAkmHbPW673cex.png&#34; &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;实现注入操作（可用于传输木马）&lt;/p&gt;
+&lt;p&gt;sql 注入执行语句可参考:&lt;a href=&#34;https://zhuanlan.zhihu.com/p/97132780&#34;&gt;https://zhuanlan.zhihu.com/p/97132780&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="个人经验" />
         <updated>2022-02-15T11:07:46.000Z</updated>

@@ -19,7 +19,7 @@
             "url": "http://example.com/2022/02/15/%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/",
             "title": "堆叠注入",
             "date_published": "2022-02-15T11:07:46.000Z",
-            "content_html": "<p>可在一句完整的话用；结束后，再续上一段 sql 语句，再以分号结尾。</p>\n<p><a href=\"https://sm.ms/image/FevdIiWDgJtKrwA\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/18/FevdIiWDgJtKrwA.png\" ></a></p>\n<p><a href=\"https://sm.ms/image/qyAkmHbPW673cex\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/18/qyAkmHbPW673cex.png\" ></a></p>\n<p>实现注入操作（可用于传输木马）</p>\n",
+            "content_html": "<p>可在一句完整的话用；结束后，再续上一段 sql 语句，再以<strong>分号</strong>结尾。</p>\n<p><a href=\"https://sm.ms/image/FevdIiWDgJtKrwA\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/18/FevdIiWDgJtKrwA.png\" ></a></p>\n<p><a href=\"https://sm.ms/image/qyAkmHbPW673cex\" target=\"_blank\"><img src=\"https://s2.loli.net/2022/02/18/qyAkmHbPW673cex.png\" ></a></p>\n<p>实现注入操作（可用于传输木马）</p>\n<p>sql 注入执行语句可参考:<a href=\"https://zhuanlan.zhihu.com/p/97132780\">https://zhuanlan.zhihu.com/p/97132780</a></p>\n",
             "tags": [
                 "个人经验"
             ]
